@@ -1,4 +1,4 @@
-package com.chinabear.sql;
+package com.chinabear.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -37,7 +37,7 @@ public class MysqlDemo {
         //delete
 
         // select
-        String sql = "select id, name from user where id = 1 ";
+        String sql = "select id, name from user ";
 
         ResultSet rs = stmt.executeQuery(sql);
 

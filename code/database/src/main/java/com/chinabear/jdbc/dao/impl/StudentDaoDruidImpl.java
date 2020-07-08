@@ -2,70 +2,52 @@ package com.chinabear.jdbc.dao.impl;
 
 import com.chinabear.jdbc.dao.StudentDao;
 import com.chinabear.jdbc.domain.Student;
+import com.chinabear.jdbc.util.JdbcDruidUtil;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by bear on 2020/7/6
- * https://zhuanlan.zhihu.com/p/66290543
+ * Created by bear on 2020/7/7
  */
-public class StudentDaoImpl implements StudentDao {
+public class StudentDaoDruidImpl implements StudentDao {
+
+
     @Override
     public int insertStudent(Student student) throws ClassNotFoundException, SQLException {
-        //驱动程序名称
-        String driver = "com.mysql.jdbc.Driver";
-        // jdbc url
-        String url = "jdbc:mysql://10.172.175.222:3301/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false";
-        // mysql 账号和密码
-        String user = "admin";
-        String password = "admin@360";
-        // 于一些被重新分配地址的变量或者参数，IDEA默认给它们加上下划线
+
         Connection conn = null;
         PreparedStatement pstmt = null;
+        ResultSet rs = null;
 
-        Class.forName(driver);
-
-        conn = DriverManager.getConnection(url,user,password);
+        conn =  JdbcDruidUtil.getConnnect();
 
         if( !conn.isClosed())
             System.out.println("Succeeded connecting to the Database!");
 
         String sql = "insert into t_student(name,age) values (?,?)";
+
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1,student.getName());
         pstmt.setInt(2,student.getAge());
 
-        int rs = pstmt.executeUpdate();
+        int rows = pstmt.executeUpdate();
 
-        pstmt.close();
-        conn.close();
-
-        return rs;
+        return rows;
     }
 
     @Override
     public int updateStudent(Student student) throws ClassNotFoundException, SQLException {
-        //驱动程序名称
-        String driver = "com.mysql.jdbc.Driver";
-        // jdbc url
-        String url = "jdbc:mysql://10.172.175.222:3301/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false";
-        // mysql 账号和密码
-        String user = "admin";
-        String password = "admin@360";
-        // 于一些被重新分配地址的变量或者参数，IDEA默认给它们加上下划线
+
         Connection conn = null;
         PreparedStatement pstmt = null;
+        ResultSet rs = null;
 
-        Class.forName(driver);
-
-        conn = DriverManager.getConnection(url,user,password);
+        conn =  JdbcDruidUtil.getConnnect();
 
         if( !conn.isClosed())
             System.out.println("Succeeded connecting to the Database!");
@@ -77,35 +59,25 @@ public class StudentDaoImpl implements StudentDao {
         pstmt.setInt(2,student.getAge());
         pstmt.setInt(3,student.getId());
 
-        int rs = pstmt.executeUpdate();
+        int rows = pstmt.executeUpdate();
 
-        pstmt.close();
-        conn.close();
-
-        return rs;
+        return rows;
     }
 
     @Override
     public Student getStudentOne(int id) throws ClassNotFoundException, SQLException {
-        //驱动程序名称
-        String driver = "com.mysql.jdbc.Driver";
-        // jdbc url
-        String url = "jdbc:mysql://10.172.175.222:3301/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false";
-        // mysql 账号和密码
-        String user = "admin";
-        String password = "admin@360";
-        // 于一些被重新分配地址的变量或者参数，IDEA默认给它们加上下划线
+
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        Class.forName(driver);
-        conn = DriverManager.getConnection(url,user,password);
+        conn =  JdbcDruidUtil.getConnnect();
 
         if( !conn.isClosed())
             System.out.println("Succeeded connecting to the Database!");
 
         String sql = "select *  from t_student where id = ?";
+
         pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1,2);
 
@@ -118,30 +90,21 @@ public class StudentDaoImpl implements StudentDao {
         int age = rs.getInt("age");
         Student student = new  Student(id, name, age);
 
-        pstmt.close();
-        conn.close();
         return student;
     }
 
     @Override
     public List<Student> getStudentList() throws ClassNotFoundException, SQLException {
-        //驱动程序名称
-        String driver = "com.mysql.jdbc.Driver";
-        // jdbc url
-        String url = "jdbc:mysql://10.172.175.222:3301/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false";
-        // mysql 账号和密码
-        String user = "admin";
-        String password = "admin@360";
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         List<Student> students = new ArrayList<>();
 
-        Class.forName(driver);
-        conn = DriverManager.getConnection(url,user,password);
+        conn =  JdbcDruidUtil.getConnnect();
 
         if( !conn.isClosed())
             System.out.println("Succeeded connecting to the Database!");
+
 
         String sql = "select *  from t_student";
         pstmt = conn.prepareStatement(sql);
@@ -160,8 +123,6 @@ public class StudentDaoImpl implements StudentDao {
             students.add(student);
         }
 
-        pstmt.close();
-        conn.close();
         return students;
     }
 }

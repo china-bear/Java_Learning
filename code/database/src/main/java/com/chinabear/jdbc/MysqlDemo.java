@@ -1,7 +1,5 @@
 package com.chinabear.jdbc;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.MatchGenerator;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

@@ -43,6 +43,7 @@ public class BashExecUtil {
         BufferedReader stdError  = null;
 
         try {
+            // execute the command
             proc = Runtime.getRuntime().exec(cmd, env);
             //process.waitFor()返回值为0表示成功，1表示失败
             exitVal = proc.waitFor();

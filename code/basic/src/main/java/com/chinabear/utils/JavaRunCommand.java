@@ -24,7 +24,7 @@ public class JavaRunCommand {
 
             ProcessBuilder builder = new ProcessBuilder(cmdArray);
 
-
+            // execute the command
             Process p = builder.start();
 
             p.waitFor();

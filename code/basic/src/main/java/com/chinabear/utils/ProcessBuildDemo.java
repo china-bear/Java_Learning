@@ -22,12 +22,12 @@ public class ProcessBuildDemo {
         }
 
         private static void startProcess() throws IOException, InterruptedException  {
-            String[] command = { "ls", "/home/xiongyouguo" };
-            ProcessBuilder probuilder = new ProcessBuilder(command);
+            String[] command = { "ls", "/home/yy" };
+            ProcessBuilder builder = new ProcessBuilder(command);
             // You can set up your work directory
             // probuilder.directory(new File("c:\\xyzwsdemo"));
 
-            Process process = probuilder.start();
+            Process process = builder.start();
 
             // Read out dir output
             InputStream is = process.getInputStream();

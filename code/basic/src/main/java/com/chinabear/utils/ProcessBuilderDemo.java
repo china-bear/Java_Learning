@@ -12,7 +12,7 @@ public class ProcessBuilderDemo {
     public static void main(String[] arg) throws IOException, InterruptedException {
         // creating list of process
         List<String> list = new ArrayList<String>();
-        list.add("XXnotepad.exe");
+        list.add("notepad.exe");
         list.add("a.txt");
         int exitValue = 1 ;
 

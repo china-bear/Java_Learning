@@ -1,6 +1,4 @@
-package exception;
-
-import javafx.scene.shape.Path;
+package demo.exception;
 
 /**
  * Created by bear on 2020/8/24

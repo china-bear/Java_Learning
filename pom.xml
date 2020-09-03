@@ -15,7 +15,6 @@
         <module>code/database</module>
         <module>code/basic</module>
         <module>code/collection-framework</module>
-        <module>code/multi-thread</module>
         <module>code/Lambda</module>
         <module>code/Annotation</module>
         <module>code/Encryption</module>
@@ -25,6 +24,7 @@
         <module>code/Generic</module>
         <module>code/dataStructures</module>
         <module>code/algorithms</module>
+        <module>code/multi-thread</module>
     </modules>
 
     <properties>

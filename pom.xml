@@ -22,7 +22,7 @@
         <module>code/IO</module>
         <module>code/Reflection</module>
         <module>code/Generic</module>
-        <module>code/dataStructures</module>
+        <module>code/data-structure</module>
         <module>code/algorithms</module>
         <module>code/multi-thread</module>
     </modules>
@@ -33,6 +33,8 @@
         <java.version>1.8</java.version>
 
         <commons-codec.version>1.14</commons-codec.version>
+        <guava.version>29.0-jre</guava.version>
+
         <mysql.version>5.1.49</mysql.version>
         <druid.version>1.1.23</druid.version>
 
@@ -58,18 +60,30 @@
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.209.209.63:8081/repository/data-releases/</url>
+            <url>http://xxx.209.209.63:8081/repository/data-releases/</url>
         </repository>
         <snapshotRepository>
             <id>data-snapshots</id>
             <name>Data Platform Snapshots</name>
-            <url>http://10.209.209.63:8081/repository/data-releases/</url>
+            <url>http://xxx.209.209.63:8081/repository/data-releases/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <!-- 依赖包版本统一管理 -->
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -82,12 +96,6 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-            <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>${commons-codec.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -9,6 +9,8 @@ java -classpath  target\data-structure-1.1-jar-with-dependencies.jar  demo.Bloom
 ### 红黑树
 java -classpath  target\data-structure-1.1.jar  demo.Tree.RedBlackTree.RBTreeDemo
 
+### 二分搜索树
+java -classpath  target\data-structure-1.1.jar  demo.Tree.BinaryTree.MainClass
 
 
 ##

@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD,ElementType.METHOD})
 @Inherited
-public @interface InitSex {
+public @interface InitSexAnnotation {
 
     enum SEX_TYPE {MAN, WOMAN}
     SEX_TYPE sex() default SEX_TYPE.MAN;

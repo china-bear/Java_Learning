@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD,ElementType.METHOD})
 @Inherited
-public @interface ValidateAge {
+public @interface ValidateAgeAnnotation {
     /**
      * 最小值
      */

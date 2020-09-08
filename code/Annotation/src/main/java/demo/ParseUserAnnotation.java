@@ -3,14 +3,10 @@ package demo;
 import java.lang.reflect.*;
 
 /**
- *  * https://juejin.im/post/6844903636733001741
- *  * https://www.jianshu.com/p/7a02ddfb0e13
- *  * https://www.jianshu.com/p/28edf5352b63
- *  * http://www.akathink.com/2016/08/11/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82Java%E6%B3%A8%E8%A7%A3Annotation/
- *  * https://zhuanlan.zhihu.com/p/60730622
+ *  https://zhuanlan.zhihu.com/p/60730622
  * Created by bear on 2020/9/7
  */
-public class TestInitParam {
+public class ParseUserAnnotation {
 
     public static void main(String[] args) throws IllegalAccessException {
         User user = new User();
@@ -30,8 +26,8 @@ public class TestInitParam {
         // 遍历所有属性
         for (Field field : fields) {
             // 如果属性上有此注解，则进行赋值操作
-            if (field.isAnnotationPresent(InitSex.class)) {
-                InitSex init = field.getAnnotation(InitSex.class);
+            if (field.isAnnotationPresent(InitSexAnnotation.class)) {
+                InitSexAnnotation init = field.getAnnotation(InitSexAnnotation.class);
                 field.setAccessible(true);
                 // 设置属性的性别值
                 field.set(user, init.sex().toString());
@@ -46,11 +42,11 @@ public class TestInitParam {
         // 遍历所有属性
         for (Field field : fields) {
             // 如果属性上有此注解，则进行赋值操作
-            if (field.isAnnotationPresent(ValidateAge.class)) {
-                ValidateAge validateAge = field.getAnnotation(ValidateAge.class);
+            if (field.isAnnotationPresent(ValidateAgeAnnotation.class)) {
+                ValidateAgeAnnotation validateAgeAnnotation = field.getAnnotation(ValidateAgeAnnotation.class);
                 field.setAccessible(true);
                 int age = (int) field.get(user);
-                if (age < validateAge.min() || age > validateAge.max()) {
+                if (age < validateAgeAnnotation.min() || age > validateAgeAnnotation.max()) {
                     result = false;
                     System.out.println("年龄值不符合条件");
                 }

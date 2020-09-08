@@ -32,7 +32,7 @@ RetentionPolicy.SOURCE：注解只在源码阶段保留 & 在编译器进行编�
 @Inherited
 
 // 可重复注解：@Repeatable 作用的注解可以取多个值 Java 1.8后引进
-public @interface MyAnnotation {
+public @interface PrivilegeAnnotation {
     // 注解@MyAnnotation有3个属性  ：role 、desc、privileges
     // 特别说明：若注解只有一个属性，则赋值时属性名称可以省略
     // 注解的属性以 “无形参的方法” 形式来声明

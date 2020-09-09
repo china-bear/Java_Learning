@@ -1,7 +1,7 @@
 package demo.BloomFilter;
 
-import com.google.common.hash.BloomFilter;
-import com.google.common.hash.Funnels;
+//import com.google.common.hash.BloomFilter;
+//import com.google.common.hash.Funnels;
 
 import java.util.BitSet;
 
@@ -108,6 +108,7 @@ public class MyBloomFilter {
 
         // 方式二： 利用Google开源的 Guava中自带的布隆过滤器, 有一个重大的缺陷就是只能单机使用,另外容量扩展也不容易
         // 创建最多存放1500个整数的布隆过滤器实例，以容忍误判的概率为百分之（0.01
+/*
         BloomFilter<Integer> gg_filter = BloomFilter.create(
                 Funnels.integerFunnel(),
                 1500,
@@ -121,6 +122,7 @@ public class MyBloomFilter {
         gg_filter.put(2);
         System.out.println(gg_filter.mightContain(1));
         System.out.println(gg_filter.mightContain(2));
+*/
 
 
        // 方式三： Redis 中的布隆过滤器

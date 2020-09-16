@@ -1,6 +1,7 @@
 package demo.arrays.dynamic;
 
 /**
+ * 动态数组
  * Created by bear on 2020/9/15
  */
 public class Array<E> {

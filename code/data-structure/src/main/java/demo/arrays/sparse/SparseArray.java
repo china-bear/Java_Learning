@@ -8,10 +8,15 @@ public class SparseArray {
     public static void main(String[] args) {
 
         //创建棋盘二维数组 0代表无子，1代表黑子，2代表白子
-        int[][] chessArray1 = new int[11][11];
-        chessArray1[1][2]=1;
-        chessArray1[2][3]=2;
-        chessArray1[4][5]=2;
+        int[][] chessArray1 = new int[6][7];
+        chessArray1[0][3]=22;
+        chessArray1[0][6]=15;
+        chessArray1[1][1]=11;
+        chessArray1[1][5]=17;
+        chessArray1[2][3]=-6;
+        chessArray1[3][5]=39;
+        chessArray1[4][0]=91;
+        chessArray1[5][2]=28;
         //打印遍历,并计算有效数字的个数
         int sum=0;
         for ( int aArray[]:chessArray1) {
@@ -28,8 +33,8 @@ public class SparseArray {
         //将棋盘二维数组转化为稀疏数组
         //创建稀疏数组并赋值
         int[][] sparseArray = new int[sum+1][3];
-        sparseArray[0][0]=11;
-        sparseArray[0][1]=11;
+        sparseArray[0][0]=6;
+        sparseArray[0][1]=7;
         sparseArray[0][2]=sum;
 
         int count=0;

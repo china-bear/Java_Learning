@@ -13,16 +13,17 @@ public class SparseArrayToFile {
      */
     private static  void toSparse(int[][] chessArray) {
         System.out.println("原始的二维数组");
-        for(int i = 0; i<chessArray[0].length;i++){
-            for(int j = 0; j<chessArray.length; j++){
+        for(int i = 0; i<chessArray.length;i++){
+            for(int j = 0; j<chessArray[0].length; j++){
+                //System.out.println("i= " + i + ",j=" + j);
                 System.out.printf("%d\t",chessArray[i][j]);
             }
             System.out.println();
         }
         //数组有多少个非零值
         int sum = 0;
-        for(int i = 0; i<chessArray[0].length;i++){
-            for(int j = 0; j<chessArray.length; j++){
+        for(int i = 0; i<chessArray.length;i++){
+            for(int j = 0; j<chessArray[0].length; j++){
                 if(chessArray[i][j]!=0){
                     sum++;
                 }
@@ -32,15 +33,15 @@ public class SparseArrayToFile {
 
         //创建稀疏数组
         int[][] sparseArray = new int[sum+1][3];
-        sparseArray[0][0] = chessArray[0].length;
-        sparseArray[0][1] = chessArray.length;
+        sparseArray[0][0] = chessArray.length;
+        sparseArray[0][1] = chessArray[0].length;
         sparseArray[0][2] = sum;
 
         //给稀疏数组赋值
         int count = 0;
         int i = 0;
-        while (i < chessArray[0].length) {
-            for (int j = 0; j < chessArray.length; j++) {
+        while (i < chessArray.length) {
+            for (int j = 0; j < chessArray[0].length; j++) {
                 if(chessArray[i][j]!=0){
                     count++;
                     //横坐标值
@@ -126,17 +127,22 @@ public class SparseArrayToFile {
     public static void main(String[] args) {
         //创建一个原始的二维数组11*11
         //0:表示没有棋子，1：表示黑子，2：表示蓝子
-        int[][] chessArray = new int[11][11];
-        chessArray[1][2] = 1;
-        chessArray[2][3] = 2;
-        chessArray[5][3] = 1;
+        int[][] chessArray = new int[6][7];
+        chessArray[0][3]=22;
+        chessArray[0][6]=15;
+        chessArray[1][1]=11;
+        chessArray[1][5]=17;
+        chessArray[2][3]=-6;
+        chessArray[3][5]=39;
+        chessArray[4][0]=91;
+        chessArray[5][2]=28;
         //调用toSparse()方法 将数组写入文件
         SparseArrayToFile.toSparse(chessArray);
         //调用toSimpleArray()方法 将数据还原成二维数组
         int[][] array = SparseArrayToFile.toSimpleArray();
         System.out.println("恢复后的原始的二维数组");
-        for(int i = 0; i<array[0].length;i++){
-            for(int j = 0; j<array.length; j++){
+        for(int i = 0; i<array.length;i++){
+            for(int j = 0; j<array[0].length; j++){
                 System.out.printf("%d\t",array[i][j]);
             }
             System.out.println();

@@ -28,4 +28,4 @@ hs_err_pid*
 *.iml
 .idea/
 # Project exclude paths
-code/*/target
+/code/*/target/

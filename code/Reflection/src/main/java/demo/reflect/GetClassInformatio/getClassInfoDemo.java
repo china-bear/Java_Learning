@@ -1,7 +1,7 @@
 package demo.reflect.GetClassInformatio;
 
 import demo.reflect.Son;
-import demo.utils.ClassUtil;
+import demo.Utils.ClassUtil;
 
 /**
  * Java 三种方式获取 Class 对象, 何一个类都是Class的实例对象

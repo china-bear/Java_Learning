@@ -32,6 +32,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <junit-jupiter.version>5.7.0</junit-jupiter.version>
 
         <commons-codec.version>1.14</commons-codec.version>
         <guava.version>29.0-jre</guava.version>
@@ -42,13 +43,14 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.version>3.8.1</maven.version>
+
     </properties>
 
     <repositories>
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.209.209.63:8081/repository/data-releases/</url>
+            <url>http://xxx.209.209.63:8081/repository/data-releases/</url>
         </repository>
         <repository>
             <id>public</id>
@@ -61,18 +63,27 @@
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.209.209.63:8081/repository/data-releases/</url>
+            <url>http://xxx.209.209.63:8081/repository/data-releases/</url>
         </repository>
         <snapshotRepository>
             <id>data-snapshots</id>
             <name>Data Platform Snapshots</name>
-            <url>http:/10.209.209.63:8081/repository/data-releases/</url>
+            <url>http:/xxx.209.209.63:8081/repository/data-releases/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <!-- 依赖包版本统一管理 -->
     <dependencyManagement>
         <dependencies>
+
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter  是常用JUnit5 模块的聚合包-->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
             <dependency>
                 <groupId>commons-codec</groupId>

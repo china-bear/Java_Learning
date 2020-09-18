@@ -29,3 +29,6 @@ hs_err_pid*
 .idea/
 # Project exclude paths
 /code/*/target/
+/code/multi-thread/*.iml
+/code/data-structure/data-structure.iml
+/code/multi-thread/multi-thread.iml

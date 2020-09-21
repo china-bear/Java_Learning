@@ -32,13 +32,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <junit-jupiter.version>5.7.0</junit-jupiter.version>
 
         <commons-codec.version>1.14</commons-codec.version>
         <guava.version>29.0-jre</guava.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+
+        <dozer.version>5.5.1</dozer.version>
+        <jackson.version>2.xxx.5</jackson.version>
 
         <mysql.version>5.1.49</mysql.version>
         <druid.version>1.1.23</druid.version>
+
+        <junit-jupiter.version>5.7.0</junit-jupiter.version>
 
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -75,27 +80,46 @@
     <!-- 依赖包版本统一管理 -->
     <dependencyManagement>
         <dependencies>
-
-            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter  是常用JUnit5 模块的聚合包-->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter</artifactId>
-                <version>${junit-jupiter.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+            <!-- commons-codec用来处理常用编码方法的工具类包
+            https://mvnrepository.com/artifact/commons-codec/commons-codec -->
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>${commons-codec.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+
+            <!-- Guava 是一个 Google 开发的 基于 Java 的类库集合的扩展项目
+            https://mvnrepository.com/artifact/com.google.guava/guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3  公共基础类-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!-- optional for BeanMapper Bean映射工具对象复制-->
+            <dependency>
+                <groupId>net.sf.dozer</groupId>
+                <artifactId>dozer</artifactId>
+                <version>${dozer.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <!--Jackson 是当前用的比较广泛的，用来序列化和反序列化 json 的 Java 的开源框架
+            https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind   -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+                <optional>true</optional>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -103,11 +127,20 @@
                 <version>${mysql.version}</version>
                 <scope>runtime</scope>
             </dependency>
+            
             <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter  是常用JUnit5 模块的聚合包-->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

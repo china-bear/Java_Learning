@@ -1,4 +1,4 @@
-package demo.reflect.CallClassMethods;
+package reflect.CallClassMethods;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

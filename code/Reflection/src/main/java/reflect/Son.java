@@ -1,4 +1,4 @@
-package demo.reflect;
+package reflect;
 
 /**
  * Created by bear on 2020/9/4

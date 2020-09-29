@@ -1,6 +1,6 @@
-package demo.reflect.CallClassMethods;
+package reflect.CallClassMethods;
 
-import demo.reflect.Son;
+import reflect.Son;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,7 +1,7 @@
-package demo.reflect.GetClassInformatio;
+package reflect.GetClassInformatio;
 
-import demo.reflect.Son;
-import demo.Utils.ClassUtil;
+import reflect.Son;
+import reflect.ClassUtil;
 
 /**
  * Java 三种方式获取 Class 对象, 何一个类都是Class的实例对象
@@ -18,7 +18,7 @@ public class getClassInfoDemo {
         // 第二种表示方式， 不知道具体类的情况，通过 Class.forName()传入类的路径获取：
         Class sonClass2 = null;
         try {
-            sonClass2 = Class.forName("demo.reflect.Son") ;
+            sonClass2 = Class.forName("reflect.Son") ;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

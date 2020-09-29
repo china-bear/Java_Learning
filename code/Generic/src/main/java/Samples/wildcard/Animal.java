@@ -1,4 +1,4 @@
-package demo.wildcard;
+package Samples.wildcard;
 
 /**
  * @program: Java_Learning

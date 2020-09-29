@@ -1,4 +1,4 @@
-package demo;
+package Annotations;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -19,7 +19,7 @@ public class ParseLoveStoryBookAnnotation {
      */
     public static void parseTypeAnnotation() throws ClassNotFoundException{
         @SuppressWarnings("rawtypes")
-        Class clazz = Class.forName("demo.LoveStoryBook");
+        Class clazz = Class.forName("Annotations.LoveStoryBook");
         Annotation[] annotations = clazz.getAnnotations();
         for (Annotation annotation : annotations) {
             BookAnnotation bookAnnotation = (BookAnnotation) annotation;

@@ -1,4 +1,4 @@
-package demo;
+package Annotations;
 
 /**
  * 爱的故事

@@ -1,4 +1,4 @@
-package demo;
+package Annotations;
 
 /**
  * 自定义注解：故事书籍信息注解

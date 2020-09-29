@@ -1,4 +1,4 @@
-package demo.sort;
+package SORT;
 
 /**
  * 插入排序 Insertion Sort

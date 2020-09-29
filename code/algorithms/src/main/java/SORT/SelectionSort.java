@@ -1,4 +1,4 @@
-package demo.sort;
+package SORT;
 
 /**
  * 选择排序 Selection Sort

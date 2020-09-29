@@ -1,4 +1,4 @@
-package demo.Tree.SegmentTree;
+package non_linear_data_structure.Tree.SegmentTree;
 
 /**
  * 线段树

@@ -1,4 +1,4 @@
-package demo.Tree.AVLTree;
+package non_linear_data_structure.Tree.AVLTree;
 
 import java.io.BufferedInputStream;
 import java.io.File;

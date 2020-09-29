@@ -1,4 +1,4 @@
-package demo.Tree.AVLTree;
+package non_linear_data_structure.Tree.AVLTree;
 
 import java.util.ArrayList;
 

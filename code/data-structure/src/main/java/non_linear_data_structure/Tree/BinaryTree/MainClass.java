@@ -1,4 +1,4 @@
-package demo.Tree.BinaryTree;
+package non_linear_data_structure.Tree.BinaryTree;
 
 /**
  * 二分搜索树

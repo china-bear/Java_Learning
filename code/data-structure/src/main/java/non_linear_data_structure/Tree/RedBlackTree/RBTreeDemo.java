@@ -1,4 +1,4 @@
-package demo.Tree.RedBlackTree;
+package non_linear_data_structure.Tree.RedBlackTree;
 
 /**
  *  红黑树

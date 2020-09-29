@@ -1,4 +1,4 @@
-package demo.Tree.TrieTree;
+package non_linear_data_structure.Tree.TrieTree;
 
 /**
  * 字典树

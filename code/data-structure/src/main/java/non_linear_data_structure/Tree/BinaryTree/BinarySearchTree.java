@@ -1,4 +1,4 @@
-package demo.Tree.BinaryTree;
+package non_linear_data_structure.Tree.BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;

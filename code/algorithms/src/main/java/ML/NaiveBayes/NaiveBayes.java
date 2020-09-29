@@ -1,4 +1,4 @@
-package DataMining.Classification.NaiveBayes;
+package ML.NaiveBayes;
 
 import java.io.BufferedReader;
 import java.io.File;

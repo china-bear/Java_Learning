@@ -1,4 +1,4 @@
-package DataMining.Classification.KNN;
+package ML.KNN;
 
 /**
  * Created by bear on 2020/9/21

@@ -1,4 +1,4 @@
-package demo.common;
+package concurrency.common;
 
 public class ThreadPoolConstants {
     public static final int CORE_POOL_SIZE = 5;

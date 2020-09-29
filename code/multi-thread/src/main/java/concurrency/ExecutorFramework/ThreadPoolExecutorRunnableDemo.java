@@ -1,13 +1,13 @@
-package demo.ExecutorFramework;
+package concurrency.ExecutorFramework;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import static demo.common.ThreadPoolConstants.CORE_POOL_SIZE;
-import static demo.common.ThreadPoolConstants.KEEP_ALIVE_TIME;
-import static demo.common.ThreadPoolConstants.MAX_POOL_SIZE;
-import static demo.common.ThreadPoolConstants.QUEUE_CAPACITY;
+import static concurrency.common.ThreadPoolConstants.CORE_POOL_SIZE;
+import static concurrency.common.ThreadPoolConstants.KEEP_ALIVE_TIME;
+import static concurrency.common.ThreadPoolConstants.MAX_POOL_SIZE;
+import static concurrency.common.ThreadPoolConstants.QUEUE_CAPACITY;
 
 
 public class ThreadPoolExecutorRunnableDemo {

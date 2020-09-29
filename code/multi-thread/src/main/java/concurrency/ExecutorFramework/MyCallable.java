@@ -1,4 +1,4 @@
-package demo.ExecutorFramework;
+package concurrency.ExecutorFramework;
 
 import java.util.concurrent.Callable;
 

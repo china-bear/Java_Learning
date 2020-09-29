@@ -1,4 +1,4 @@
-package demo.Synchronized;
+package concurrency.Synchronized;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

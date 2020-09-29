@@ -1,4 +1,4 @@
-package demo.ReentrantLock;
+package concurrency.ReentrantLock;
 
 import java.util.ArrayList;
 import java.util.List;

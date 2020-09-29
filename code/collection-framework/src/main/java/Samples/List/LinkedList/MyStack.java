@@ -1,4 +1,4 @@
-package demo.List.LinkedList;
+package linear_data_structure.List.LinkedList;
 
 import java.util.LinkedList;
 
@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class MyStack {
 
-    private LinkedList<String> linkList = new LinkedList<String>();
+    private final LinkedList<String> linkList = new LinkedList<String>();
 
     // 压栈
     public void push(String str){

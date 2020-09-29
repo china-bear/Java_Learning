@@ -1,6 +1,6 @@
-package demo.Set.LinkedHashSet;
+package Samples.Set.LinkedHashSet;
 
-import demo.Set.HashSet.Person;
+import Samples.Set.HashSet.Person;
 
 import java.util.LinkedHashSet;
 

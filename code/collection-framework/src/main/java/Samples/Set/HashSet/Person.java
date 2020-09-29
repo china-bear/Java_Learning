@@ -1,9 +1,9 @@
-package demo.Set.TreeSet;
+package Samples.Set.HashSet;
 
 /**
  * Created by bear on 2020/9/1
  */
-public class Person implements Comparable<Person> {
+public class Person {
 
     // 属性
     private String name;
@@ -57,11 +57,8 @@ public class Person implements Comparable<Person> {
         if (age != other.age)
             return false;
         if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        return true;
+            return other.name == null;
+        } else return name.equals(other.name);
     }
 
     @Override
@@ -71,14 +68,4 @@ public class Person implements Comparable<Person> {
                 ", age=" + age +
                 '}';
     }
-
-    @Override
-    public int compareTo(Person o) {
-        int result = this.age - o.age;
-        if (result == 0){
-            return this.name.compareTo(o.name);
-        }
-        return result;
-    }
-
 }

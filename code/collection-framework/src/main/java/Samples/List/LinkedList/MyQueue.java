@@ -1,4 +1,4 @@
-package demo.List.LinkedList;
+package linear_data_structure.List.LinkedList;
 
 import java.util.LinkedList;
 
@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class MyQueue {
 
-    private LinkedList<String> link = new LinkedList<String>();
+    private final LinkedList<String> link = new LinkedList<String>();
 
     // 放入
     public void put(String str){

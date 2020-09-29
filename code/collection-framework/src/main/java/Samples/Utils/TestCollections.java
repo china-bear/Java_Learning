@@ -1,4 +1,4 @@
-package demo.Utils;
+package Samples.Utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +16,7 @@ public class TestCollections {
     public static void main(String[] args) {
         //注意List是实现Collection接口的
         List list = new ArrayList();
-        double array[] = { 112, 111, 23, 69, 5,1,77 };
+        double[] array = { 112, 111, 23, 69, 5,1,77 };
 
         for (int i = 0; i < array.length; i++) {
             list.add(new Double(array[i]));

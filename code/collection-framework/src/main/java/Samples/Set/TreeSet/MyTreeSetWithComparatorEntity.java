@@ -1,8 +1,8 @@
-package demo.Set.TreeSet;
+package Samples.Set.TreeSet;
 
 import java.util.Comparator;
 import java.util.TreeSet;
-import demo.Set.HashSet.Person;
+import Samples.Set.HashSet.Person;
 
 /**
  * TreeSet保证元素的唯一性是有两种方式：

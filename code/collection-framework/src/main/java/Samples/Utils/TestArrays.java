@@ -1,6 +1,6 @@
-package demo.Utils;
+package Samples.Utils;
 
-import demo.Set.TreeSet.Person;
+import Samples.Set.TreeSet.Person;
 
 import java.util.Arrays;
 

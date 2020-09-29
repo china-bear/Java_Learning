@@ -1,4 +1,4 @@
-package demo.List.ArrayList;
+package linear_data_structure.List.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -26,9 +26,9 @@ public class MyArrayList {
         System.out.println("-------------------");
 
         ArrayList<String> list2 = new ArrayList<String>();
-        list2.add(new String("Monday"));
-        list2.add(new String("Tuesday"));
-        list2.add(new String("Wensday"));
+        list2.add("Monday");
+        list2.add("Tuesday");
+        list2.add("Wensday");
         // 第二种遍历方式，使用增强for迭代，简化了迭代容器时的写法
         for (String weekday  : list2){
             System.err.println(weekday.toUpperCase());

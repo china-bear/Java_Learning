@@ -1,4 +1,4 @@
-package demo.object_copier;
+package object_copier;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package demo.exception;
+package linear_data_structure.exception;
 
 /**
  * Created by bear on 2020/8/24

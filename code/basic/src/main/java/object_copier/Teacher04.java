@@ -1,4 +1,4 @@
-package demo.object_copier;
+package linear_data_structure.object_copier;
 
 /**
  * 对象实现 Cloneable 接口方式实现深拷贝,引用对象也实现 Cloneable 接口

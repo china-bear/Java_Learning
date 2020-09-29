@@ -1,4 +1,4 @@
-package demo.object_copier;
+package linear_data_structure.object_copier;
 
 import java.io.Serializable;
 

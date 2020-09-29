@@ -1,4 +1,4 @@
-package demo.Recursion;
+package linear_data_structure.Recursion;
 
 /**
  * Created by bear on 2020/9/15

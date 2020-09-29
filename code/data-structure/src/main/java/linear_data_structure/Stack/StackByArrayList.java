@@ -2,7 +2,7 @@ package linear_data_structure.Stack;
 
 
 
-import linear_data_structure.LinkedList.MyCollection.MyArrayList;
+import linear_data_structure.List.MyCollection.MyArrayList;
 
 import java.io.Serializable;
 

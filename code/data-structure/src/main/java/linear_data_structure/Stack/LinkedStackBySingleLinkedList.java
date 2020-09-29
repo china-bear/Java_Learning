@@ -1,6 +1,6 @@
 package linear_data_structure.Stack;
 
-import linear_data_structure.LinkedList.singleLinked.SingleILinkedList;
+import linear_data_structure.List.singleLinked.SingleILinkedList;
 
 import java.io.Serializable;
 

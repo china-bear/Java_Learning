@@ -2,7 +2,7 @@ package linear_data_structure.Queue;
 
 
 
-import linear_data_structure.LinkedList.MyCollection.SortMyLinkedList;
+import linear_data_structure.List.MyCollection.SortMyLinkedList;
 
 import java.io.Serializable;
 import java.util.NoSuchElementException;

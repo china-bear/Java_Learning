@@ -5,7 +5,7 @@ package linear_data_structure.Queue;
 import java.io.Serializable;
 import java.util.*;
 
-import linear_data_structure.LinkedList.singleLinked.Node;
+import linear_data_structure.List.singleLinked.Node;
 
 /**
  * Created by zejian on 2016/11/28.

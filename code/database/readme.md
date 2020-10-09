@@ -1,5 +1,5 @@
 # 打包
-mvn clean  package -DskipTests -Pjava_learning
+mvn clean  package -DskipTests -Pdatabase
 
 
 # 运行   不带MANIFEST文件的jar包

@@ -59,7 +59,7 @@
 
     <profiles>
         <profile>
-            <id>java_learning</id>
+            <id>database</id>
             <build>
                 <plugins>
                     <plugin>
@@ -84,14 +84,15 @@
         </profile>
 
         <profile>
-            <id>database</id>
+            <id>database-assembly</id>
             <build>
                 <plugins>
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
+                            <finalName>database</finalName>   <!-- 配置打包后的文件前缀名 -->
                             <descriptors>
-                                <descriptor>package-assembly-database.xml</descriptor>
+                                <descriptor>src/main/assembly/database-assembly.xml</descriptor>
                             </descriptors>
                         </configuration>
                         <executions>

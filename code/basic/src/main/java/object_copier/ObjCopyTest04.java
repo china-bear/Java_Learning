@@ -1,7 +1,5 @@
 package object_copier;
 
-import object_copier.Teacher04;
-
 /**
  * 对象实现 Cloneable 接口方式实现深拷贝,引用对象也实现 Cloneable 接口
  * Created by bear on 2020/9/14

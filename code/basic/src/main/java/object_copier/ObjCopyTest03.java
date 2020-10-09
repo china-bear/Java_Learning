@@ -1,8 +1,8 @@
 package object_copier;
 
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -21,7 +21,7 @@ public class ObjCopyTest03 {
         user1.setTeacher(teacher);
 
         //序列化写入到流里
-        ByteOutputStream bots=new ByteOutputStream();
+        ByteArrayOutputStream bots=new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bots);
         oos.writeObject(user1);
 

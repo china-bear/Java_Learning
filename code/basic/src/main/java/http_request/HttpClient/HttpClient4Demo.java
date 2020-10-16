@@ -1,3 +1,4 @@
+/*
 package http_request.HttpClient;
 
 import java.io.IOException;
@@ -22,9 +23,12 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+*/
 /**
  *  https://zhuanlan.zhihu.com/p/69285935
  */
+/*
+
 public class HttpClient4Demo {
 
     // get method
@@ -152,3 +156,4 @@ public class HttpClient4Demo {
         System.out.println(doPost("http://ip.taobao.com/ipSearch", paramMap));
     }
 }
+*/

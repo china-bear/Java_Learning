@@ -1,4 +1,4 @@
-package linear_data_structure.List.Vector;
+package Samples.List.Vector;
 
 import java.util.Enumeration;
 import java.util.Vector;

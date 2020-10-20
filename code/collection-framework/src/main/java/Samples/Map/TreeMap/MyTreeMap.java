@@ -1,6 +1,6 @@
-package linear_data_structure.Map.TreeMap;
+package Samples.Map.TreeMap;
 
-import linear_data_structure.Map.HashMap.Person;
+import Samples.Map.HashMap.Person;
 
 import java.util.Comparator;
 import java.util.Map;

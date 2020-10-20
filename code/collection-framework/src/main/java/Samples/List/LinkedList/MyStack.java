@@ -1,4 +1,4 @@
-package linear_data_structure.List.LinkedList;
+package Samples.List.LinkedList;
 
 import java.util.LinkedList;
 

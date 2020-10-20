@@ -1,4 +1,4 @@
-package linear_data_structure.Map.HashMap;
+package Samples.Map.HashMap;
 
 import java.util.HashMap;
 import java.util.Iterator;

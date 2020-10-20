@@ -1,4 +1,4 @@
-package linear_data_structure.List.ArrayList;
+package Samples.List.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package linear_data_structure.Map.HashMap;
+package Samples.Map.HashMap;
 
 /**
  * Created by bear on 2020/9/1

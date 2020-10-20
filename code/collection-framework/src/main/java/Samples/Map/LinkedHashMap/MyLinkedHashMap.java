@@ -1,9 +1,9 @@
-package linear_data_structure.Map.LinkedHashMap;
+package Samples.Map.LinkedHashMap;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import linear_data_structure.Map.HashMap.Person;
+import Samples.Map.HashMap.Person;
 
 /**
  * 基于链表和哈希表结构的所以具有存取有序，键不重复的特性

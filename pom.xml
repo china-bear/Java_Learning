@@ -24,7 +24,7 @@
         <module>code/Generic</module>
         <module>code/data-structure</module>
         <module>code/algorithms</module>
-        <module>code/multi-thread</module>
+        <module>code/concurrency</module>
         <module>code/design-patterns</module>
     </modules>
 
@@ -36,9 +36,10 @@
         <commons-codec.version>1.14</commons-codec.version>
         <guava.version>29.0-jre</guava.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
+        <httpclient.version>4.5.12</httpclient.version>
 
         <dozer.version>5.5.1</dozer.version>
-        <jackson.version>2.xxx.5</jackson.version>
+        <jackson.version>2.10.5</jackson.version>
 
         <mysql.version>5.1.49</mysql.version>
         <druid.version>1.1.23</druid.version>
@@ -103,6 +104,13 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
             <!-- optional for BeanMapper Bean映射工具对象复制-->
             <dependency>
                 <groupId>net.sf.dozer</groupId>
@@ -150,7 +158,7 @@
         <!-- 插件版本统一管理 -->
         <pluginManagement>
             <plugins>
-                <!-- maven-compiler-plugin的compile目标用来编译位于src/main/java/目录下的主源码 -->
+                <!-- maven-compiler-plugin的compile目标用来编译位于src/FastCopy/java/目录下的主源码 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>

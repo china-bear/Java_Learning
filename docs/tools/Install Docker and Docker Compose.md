@@ -21,6 +21,7 @@ Finally, start the Docker service:
 $ sudo systemctl start docker.service
 
 To verify a successful Docker installation, run:
+$ docker --version
 $ sudo docker run hello-world
 
 ## Step 2 — Install Docker Compose
@@ -40,3 +41,6 @@ $ sudo yum upgrade python*
 To verify a successful Docker Compose installation, run:
 $ docker-compose version
 
+
+
+###https://github.com/NaturalHistoryMuseum/scratchpads2/wiki/Install-Docker-and-Docker-Compose-(Centos-7)#install-docker--docker-compose---centos-7

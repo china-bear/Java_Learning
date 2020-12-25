@@ -88,7 +88,7 @@ public class gsonTest01 {
         System.out.println(jsonObject);
 
         //POJO类的解析
-        String jsonStr = "{\"name\":\"海盗\",\"age\":24}";
+        String jsonStr = "{\"name\":\"海盗\",\"age\":24,\"languages\":[{\"id\":1,\"name\":\"Java\"},{\"id\":2,\"name\":\"Swift\"}]}";
         User user1 = gson.fromJson(jsonStr, User.class);
         System.out.println(user1);
         System.out.println(user1.getName());
@@ -96,10 +96,11 @@ public class gsonTest01 {
         // 等价下面  下面二种 https://stackoverflow.com/questions/5128442/how-to-convert-a-string-to-jsonobject-using-gson-library/39636232
         // https://www.jianshu.com/p/e740196225a4
         // https://www.jianshu.com/p/91dc4033e733
-
+        // JSONObject jsonObject1 = new JSONObject(jsonStr);
         JsonObject convertedObject = new Gson().fromJson(jsonStr, JsonObject.class);
         System.out.println(convertedObject);
         System.out.println(convertedObject.get("name").getAsString());
+        System.out.println(convertedObject.get("languages").getAsJsonArray().get(0).getAsJsonObject().get("name"));
 
         JsonParser jsonParser = new JsonParser();
         JsonObject jo = (JsonObject)jsonParser.parse(jsonStr);

@@ -67,4 +67,10 @@ public class JdbcUtil {
         }
     }
 
+    public static void main(String[] args) {
+        System.out.println(p.getProperty("url"));
+        System.out.println(p.getProperty("username"));
+        System.out.println(p.getProperty("password"));
+    }
+
 }

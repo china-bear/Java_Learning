@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace属性是名称空间，必须唯一 -->
+<mapper namespace="com.chinabear.jdbc.domain.Student">
+
+    <!-- resultMap标签:映射实体与表
+         type属性：表示实体全路径名
+         id属性：为实体与表的映射取一个任意的唯一的名字
+    -->
+    <resultMap id="studentMap"  type="com.chinabear.jdbc.domain.Student" >
+        <!-- id标签:映射主键属性
+             result标签：映射非主键属性
+             property属性:实体的属性名
+             column属性：表的字段名
+        -->
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+    </resultMap>
+
+    <!-- 在JDBC中我们通常使用?号作为占位符，而在Mybatis中，我们是使用#{}作为占位符
+        parameterType我们指定了传入参数的类型, //#{}实际上就是调用了Student属性的get方法 -->
+
+     <insert id="add" parameterType="com.chinabear.jdbc.domain.Student">
+         INSERT INTO t_student (id, name, age) VALUES (#{id},#{name},#{age});
+     </insert>
+    <!--   查询根据id  resultMap这个属性代表是返回值类型，返回值的类型是Student，就是上面实体类型 -->
+
+    <select id="findById" parameterType="int" resultMap="studentMap">
+        SELECT * FROM t_student WHERE id = #{id};
+    </select>
+
+
+    <!--查询所有数据   返回值类型讲道理是List<Student>的，但我们只要写集合中的类型就行了
+        -->
+    <select id="findAll" resultMap="studentMap">
+        SELECT * FROM t_student;
+    </select>
+
+    <!--根据id删除-->
+    <delete id="delete" parameterType="int">
+        DELETE FROM t_student WHERE id=#{id};
+    </delete>
+
+    <!--更新-->
+    <update id="update" parameterType="com.chinabear.jdbc.domain.Student">
+        update t_student set name=#{name},age=#{age} where id=#{id};
+    </update>
+
+    <!--分页查询-->
+    <select id="findPage" parameterType="map" resultMap="studentMap">
+        <!--根据key自动找到对应Map集合的value-->
+        select * from t_student limit #{start},#{limit};
+    </select>
+
+
+    <!--多条件查询【动态SQL】  会自动组合成一个正常的WHERE字句  name值会从map中寻找-->
+    <select id="findByCondition" resultMap="studentMap" parameterType="map">
+
+        select * from t_student
+
+        <where>
+            <if test="name!=null">
+                and name=#{name}
+            </if>
+            <if test="age!=null">
+                and age < #{age}
+            </if>
+        </where>
+
+    </select>
+
+ </mapper>

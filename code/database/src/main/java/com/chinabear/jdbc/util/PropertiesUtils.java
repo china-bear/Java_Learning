@@ -1,5 +1,8 @@
 package com.chinabear.jdbc.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -7,6 +10,7 @@ import java.util.Properties;
 
 public class PropertiesUtils {
 
+	private static final Logger logger = LoggerFactory.getLogger(PropertiesUtils.class);
 	private static Properties properties;
 
 	static {
@@ -15,7 +19,7 @@ public class PropertiesUtils {
 			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 			properties.load(classLoader.getResourceAsStream("application.properties"));
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error("err: " ,e);
 		}
 	}
 

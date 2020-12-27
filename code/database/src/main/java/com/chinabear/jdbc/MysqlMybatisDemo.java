@@ -136,6 +136,67 @@ public class MysqlMybatisDemo {
         }
     }
 
+
+    public void insertByConditions(Student student) throws Exception {
+        //得到连接对象
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        try{
+            //映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+            sqlSession.insert("com.chinabear.jdbc.domain.Student.insertByConditions", student);
+            sqlSession.commit();
+        }catch(Exception e){
+            e.printStackTrace();
+            sqlSession.rollback();
+            throw e;
+        }finally{
+            MybatisUtil.closeSqlSession();
+        }
+    }
+
+    public void deleteByConditions(int... ids) throws Exception {
+        //得到连接对象
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        try{
+            //映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+            /**
+             * 由于我们的参数超过了两个，而方法中只有一个Object参数收集
+             * 因此我们使用Map集合来装载我们的参数
+             */
+            sqlSession.delete("com.chinabear.jdbc.domain.Student.deleteByConditions", ids);
+            sqlSession.commit();
+        }catch(Exception e){
+            e.printStackTrace();
+            sqlSession.rollback();
+            throw e;
+        }finally{
+            MybatisUtil.closeSqlSession();
+        }
+    }
+
+    public void updateByConditions(int id,String name,int age) throws Exception {
+        //得到连接对象
+        SqlSession sqlSession = MybatisUtil.getSqlSession();
+        try{
+            //映射文件的命名空间.SQL片段的ID，就可以调用对应的映射文件中的SQL
+            /**
+             * 由于我们的参数超过了两个，而方法中只有一个Object参数收集
+             * 因此我们使用Map集合来装载我们的参数
+             */
+            Map<String, Object> map = new HashMap();
+            map.put("id", id);
+            map.put("name", name);
+            map.put("age", age);
+            sqlSession.update("com.chinabear.jdbc.domain.Student.updateByConditions", map);
+            sqlSession.commit();
+        }catch(Exception e){
+            e.printStackTrace();
+            sqlSession.rollback();
+            throw e;
+        }finally{
+            MybatisUtil.closeSqlSession();
+        }
+    }
+
     public static void main(String[] args) throws Exception {
 
         MysqlMybatisDemo mysqlMybatisDemo = new MysqlMybatisDemo();
@@ -155,11 +216,18 @@ public class MysqlMybatisDemo {
         System.out.println(student3);
 
         mysqlMybatisDemo.delete(10);
+        mysqlMybatisDemo.deleteByConditions(12,13);
 
+        mysqlMybatisDemo.insertByConditions(new Student( 12, "小强", 29));//  age为空
+        mysqlMybatisDemo.insertByConditions(new Student( "老王", 58));//  ID为空
+        mysqlMybatisDemo.updateByConditions(12,"小强变了",32);
         List<Student> students = mysqlMybatisDemo.findAll();
         System.out.println(students.size());
         System.out.println(students);
 
-        List<Student> students2 = mysqlMybatisDemo.findByCondition("小乔",30);
+
+        List<Student> students2 = mysqlMybatisDemo.findByCondition("小乔",35);
+        System.out.println(students2);
+
     }
 }

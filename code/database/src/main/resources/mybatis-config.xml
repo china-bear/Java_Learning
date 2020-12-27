@@ -41,6 +41,11 @@
 
     <mappers>
         <mapper resource="StudentMapper.xml"/>
+        <mapper resource="CardMapper.xml"/>
+        <mapper resource="StudentsMapper.xml"/>
+        <mapper resource="GradeMapper.xml"/>
+        <mapper resource="CourseMapper.xml"/>
     </mappers>
 
 </configuration>
+

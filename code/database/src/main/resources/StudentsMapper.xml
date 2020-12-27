@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="studentsNamespace">
+
+    <resultMap type="com.chinabear.jdbc.domain.Students" id="studentMap">
+        <id property="id" column="sid"/>
+        <result property="name" column="sname"/>
+
+        <!-- property写的是在Student实体中写关联字段的属性变量名称
+            resultMap写的是映射文件中的命名空间.id   -->
+        <association property="card" resultMap="cardNamespace.cardMap"/>
+        <association property="grade" resultMap="gradeNamespace.gradeMap"/>
+    <!-- <association property="course" resultMap="courseNamespace.courseMap"/> -->
+</resultMap>
+
+<select id="findById" parameterType="int" resultMap="studentMap">
+   select * from test_db.students s,test_db.cards c where c.cid = s.scid and sid=#{id};
+</select>
+
+<!--查询一年纪有多少位学生-->
+
+    <!--由于我们只要查询学生的名字，而我们的实体studentMap可以封装学生的名字，那么我们返回studentMap即可，并不需要再关联到学科表-->
+    <select id="findByGrade" parameterType="string" resultMap="studentMap">
+		select s.sname,s.sid
+		from test_db.students s,test_db.grades g
+		WHERE s.sgid=g.gid and g.gname=#{name};
+	</select>
+
+
+    <select id="findAllByCourseName" parameterType="string" resultMap="studentMap">
+		select s.sname
+		from students s inner join middles m
+		on s.sid = m.msid
+		inner join courses c
+		on m.mcid = c.cid
+		and c.cname = #{name}
+	</select>
+
+</mapper>
+
+

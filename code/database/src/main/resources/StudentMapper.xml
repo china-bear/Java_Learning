@@ -2,13 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- namespace属性是名称空间，必须唯一 -->
+<!-- xml文件第一个字符必须是<?xml， 第一行不允许为空
+namespace属性是名称空间，必须唯一 -->
 <mapper namespace="com.chinabear.jdbc.domain.Student">
 
-    <!-- resultMap标签:映射实体与表
+        <!--
+        Mybatis工作流程
+        1. 通过Reader对象读取Mybatis配置文件
+        2. 通过SqlSessionFactoryBuilder对象创建SqlSessionFactory对象
+        3.获取当前线程的SQLSession
+        4. 事务默认开启
+        5. 通过SQLSession读取映射文件中的操作编号，从而读取SQL语句
+        6. 提交事务
+        7. 关闭资源
+
+         resultMap标签:映射实体与表
          type属性：表示实体全路径名
          id属性：为实体与表的映射取一个任意的唯一的名字
-    -->
+
+         注意：这个insert/update/delete标签只是一个模板，在做操作时，其实是以SQL语句为核心的
+         即在做增/删/时，insert/update/delete标签可通用，
+         但做查询时只能用select标签
+         我们提倡什么操作就用什么标签
+         -->
     <resultMap id="studentMap"  type="com.chinabear.jdbc.domain.Student" >
         <!-- id标签:映射主键属性
              result标签：映射非主键属性
@@ -66,10 +82,88 @@
                 and name=#{name}
             </if>
             <if test="age!=null">
-                and age < #{age}
+                <!-- 使用<![CDATA[ ]]> 屏蔽XML转义字符  &、<、>、 "、 ' -->
+                 <![CDATA[ and age <  #{age} ]]>
+                 and age &lt; #{age}
+             </if>
+         </where>
+
+     </select>
+
+
+    <!--SQL片段默认是不帮我们自动生成合适的SQL，因此需要我们自己手动除去逗号-->
+    <sql id="key">
+        <trim suffixOverrides=",">
+            <if test="id!=null">
+                id,
             </if>
-        </where>
 
-    </select>
+            <if test="id!=null">
+                name,
+            </if>
 
- </mapper>
+            <if test="id!=null">
+                age,
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="value">
+        <trim suffixOverrides=",">
+            <if test="id!=null">
+                #{id},
+            </if>
+
+            <if test="id!=null">
+                #{name},
+            </if>
+
+            <if test="id!=null">
+                #{age},
+            </if>
+        </trim>
+    </sql>
+    <!--动态插入-->
+    <insert id="insertByConditions" parameterType="com.chinabear.jdbc.domain.Student">
+
+        insert into t_student (<include refid="key"/>) values
+        (<include refid="value"/>)
+
+    </insert>
+
+
+    <!--动态更新-->
+    <!--不要忘了逗号-->
+    <update id="updateByConditions" parameterType="map">
+
+        update t_student
+        <set>
+            <if test="name!=null">
+                name = #{name},
+            </if>
+            <if test="age!=null">
+                age = #{age},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <delete id="deleteByConditions" parameterType="int">
+
+        <!-- foreach用于迭代数组元素
+             open表示开始符号
+             close表示结束符合
+             separator表示元素间的分隔符
+             item表示迭代的数组，属性值可以任意，但提倡与方法的数组名相同
+             #{ids}表示数组中的每个元素值
+         -->
+        delete from t_student  where id in
+        <foreach collection="array" open="(" close=")" separator="," item="ids">
+            #{ids}
+        </foreach>
+
+    </delete>
+
+
+</mapper>

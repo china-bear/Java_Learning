@@ -10,7 +10,9 @@ import java.util.logging.Logger;
  * Created by bear on 2020/8/20
  */
 
-/* https://www.edureka.co/blog/logger-in-java
+/*
+https://husterxsp.github.io/2018/08/30/ProcessBuilder-vs-Runtime/
+https://www.edureka.co/blog/logger-in-java
 https://github.com/niv26222/ProcessBuilder/blob/master/ProcessBuilder.java
 https://github.com/babydoggins/processbuilder/tree/master/src
 org.apache.log4j.* package provides the following levels in descending order:
@@ -54,7 +56,6 @@ public class BashExecUtil {
                 LOGGER.log(Level.INFO ,line);
                 System.out.println(line);
             }
-
 
             stdError  = new BufferedReader(new InputStreamReader(proc.getErrorStream(), "UTF-8"));
             // read any errors from the attempted command

@@ -52,7 +52,7 @@ public enum Color {
     }
 
     public static void main(String[] args) {
-        System.out.println(Color.getIndex("白色") + "  " + Color.getName(3));   // 88  白色
-        System.out.println(Color.getIndex("黑色") + "  " + Color.getName(10));  //-1 null
+        System.out.println(Color.getIndex("白色") + "  " + Color.getName(88));   // 88  白色
+        System.out.println(Color.getIndex("黑色") + "  " + Color.getName(1));  //-1 null
     }
 }

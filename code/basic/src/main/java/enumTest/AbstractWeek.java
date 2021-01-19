@@ -45,8 +45,15 @@ public enum AbstractWeek {
     private int num;
     private String desc;
 
+    public int getNum() {
+        return num;
+    }
 
-    AbstractWeek(int num,String desc) {
+    public String getDesc() {
+        return desc;
+    }
+
+    AbstractWeek(int num, String desc) {
         this.num = num;
         this.desc=desc;
     }

@@ -3,6 +3,7 @@ package concurrency.FutureTask;
 import java.util.concurrent.*;
 
 // https://juejin.cn/post/6844903774985650183
+// https://zhuanlan.zhihu.com/p/88933756
 public class FutureTaskExample {
     public static void main(String[] args) {
         MyCallable2 callable1 = new MyCallable2(1000);                       // 要执行的任务

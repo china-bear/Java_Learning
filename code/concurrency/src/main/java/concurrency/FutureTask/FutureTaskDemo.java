@@ -41,7 +41,7 @@ public class FutureTaskDemo {
         System.out.println("主线程在执行任务");
 
         try {
-            //  获取futuretask结果
+            //  获取future task结果
             System.out.println("task运行结果: "+futureTask.get());
         } catch (InterruptedException e) {
             e.printStackTrace();

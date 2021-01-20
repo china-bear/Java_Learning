@@ -20,6 +20,7 @@ public class Log4JTest {
     private static final Logger logger = LoggerFactory.getLogger(Log4JTest.class);
 
     public static void main(String[] args) {
+        // https://juejin.cn/post/6844903874650701832 log4j.properties配置
         // 记录debug级别的信息
         logger.debug("This is debug message.");
         // 记录info级别的信息

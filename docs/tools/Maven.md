@@ -13,6 +13,9 @@ dependencyManagement  声明依赖，并不引入依赖。
 Maven的安装配置和Maven在Intellij idea中的使用配置
 https://juejin.im/post/6844904096961396749
 
+###  Include different properties files based on profile in Maven  
+### Using Maven for multiple deployment environment (production/development)
+https://notestack.io/public/include-different-properties-files-based-on-profile-in-maven/74f5e34b-3233-4c7b-b200-a08e5256002d
 
 ***
 一定要确保IDEA Maven 用户配置文件settings.xml  和  命令行MVN 依赖settings.xml 一致（mvn -v 可以查看调用的MVN路径），要不引起本地仓库不一致情况 

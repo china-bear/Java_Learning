@@ -14,6 +14,7 @@ Maven的安装配置和Maven在Intellij idea中的使用配置
 https://juejin.im/post/6844904096961396749
 
 ###  Include different properties files based on profile in Maven  
+https://stackoverflow.com/questions/1149352/using-maven-for-multiple-deployment-environment-production-development
 ### Using Maven for multiple deployment environment (production/development)
 https://notestack.io/public/include-different-properties-files-based-on-profile-in-maven/74f5e34b-3233-4c7b-b200-a08e5256002d
 

@@ -3,7 +3,7 @@ package serializable;
 import java.io.*;
 
 /**
- *
+ *https://www.jianshu.com/p/19ba0764bfbd
  */
 public class MainClass {
 

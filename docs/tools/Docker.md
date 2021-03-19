@@ -1,5 +1,5 @@
 **本文只是对 Docker 的概念做了较为详细的介绍，并不涉及一些像 Docker 环境的安装以及 Docker 的一些常见操作和命令。**
-
+https://github.com/yeasy/docker_practice 翻译文档
 安装docker https://yeasy.gitbook.io/docker_practice/install/centos
 
 ## 一 认识容器

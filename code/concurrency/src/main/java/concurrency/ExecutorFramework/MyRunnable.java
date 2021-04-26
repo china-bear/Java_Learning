@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * 这是一个简单的Runnable类，需要大约5秒钟来执行其任务。
+ * java中Runnable和Callable的区别   https://juejin.cn/post/6844904086832152590
  */
 public class MyRunnable implements Runnable {
 

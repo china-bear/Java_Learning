@@ -10,10 +10,13 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import static concurrency.common.ThreadPoolConstants.CORE_POOL_SIZE;
-import static concurrency.common.ThreadPoolConstants.KEEP_ALIVE_TIME;
-import static concurrency.common.ThreadPoolConstants.MAX_POOL_SIZE;
-import static concurrency.common.ThreadPoolConstants.QUEUE_CAPACITY;
+import static concurrency.common.ThreadPoolConstants.*;
+
+/** Java—线程池ThreadPoolExecutor详解
+ * https://juejin.cn/post/6844904146856837128
+ * https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html
+*/
+
 
 public class ThreadPoolExecutorCallableDemo {
     public static void main(String[] args) {

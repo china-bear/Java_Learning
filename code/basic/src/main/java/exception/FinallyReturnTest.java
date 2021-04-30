@@ -27,7 +27,7 @@ public class FinallyReturnTest {
     }
 
 
-    /* 执行顺序：try中执行完return的语句后，不返回，执行finally块，finally块执行结束后，返回到try块中，返回 exitValue 在try块中最后的值。*/
+    /* 执行顺序：try中执行完return的语句后，不返回，执行finally块，finally块执行结束后，返回到try块中，依旧返回 exitValue 在try块中最后的值。*/
     public static  int NoException2(){
 
         int exitValue =10;

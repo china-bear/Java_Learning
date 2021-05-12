@@ -26,6 +26,7 @@
         <module>code/algorithms</module>
         <module>code/concurrency</module>
         <module>code/design-patterns</module>
+        <module>code/jvm</module>
     </modules>
 
     <properties>

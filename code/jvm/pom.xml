@@ -12,5 +12,47 @@
 
     <artifactId>jvm</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!--Jackson 是当前用的比较广泛的，用来序列化和反序列化 json 的 Java 的开源框架 https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind   -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--slf4j-api包 是日志的接口，log4j,logback等等才是日志的真正实现,建议使用SLF4J的而不是直接使用 Log4j, commons logging, logback 或者 java.util.logging 已经足够充分了。-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--slf4j-log4j12 provides a bridge between SLF4J and Log4j 1.2 so that SLF4J knows about how to log using Log4j.-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <!--slf4j-simple包 是slf4j提供的一个简单实现-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
 
 </project>

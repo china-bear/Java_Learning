@@ -4,17 +4,6 @@
 
 ## 📖 内容
 
-### [JVM 体系结构](jvm-architecture.md)
-
-### [JVM 内存管理](jvm-memory.md)
-
-### [JVM 垃圾收集](jvm-gc.md)
-
-### [JVM 字节码](jvm-bytecode.md)
-
-### [JVM 类加载](jvm-class-loader.md)
-
-### [JVM 实战](jvm-action.md)
 
 ### [JDK 命令行工具](jvm-cli-tools.md)
 
@@ -23,13 +12,12 @@
 ### [TroubleShooting](trouble-shooting.md)
 
 ## 📚 资料
+- [JVM系统学习之路系列  JVM演示代码不错](https://github.com/mtcarpenter/JavaTutorial)  
 
-- [《深入理解 Java 虚拟机》](https://item.jd.com/11252778.html)
 - [《Java 核心技术面试精讲》](https://time.geekbang.org/column/intro/82)
 - [《Java 性能调优实战》](https://time.geekbang.org/column/intro/100028001)
 - [《Java 业务开发常见错误 100 例》](https://time.geekbang.org/column/intro/100047701)
-- [深入拆解 Java 虚拟机](https://time.geekbang.org/column/intro/100010301)
-- [从表到里学习 JVM 实现](https://www.douban.com/doulist/2545443/)
+
 
 ## 🚪 传送
 

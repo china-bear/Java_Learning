@@ -25,7 +25,7 @@ public class WildcardTestUp {
 
     }
 
-    /**
+    /** ? 代替具体的类型实参,不是类型形参
      * 泛型上限通配符，传递的集合类型，只能是Cat或Cat的子类类型
      * @param list
      */

@@ -6,7 +6,7 @@ package Samples.erase;
  * @author: Mr.Bear
  * @create: 2020-09-13 11:14
  **/
-public class Erasure<T> {
+public class Erasure01<T> {
 
     private T key;
 

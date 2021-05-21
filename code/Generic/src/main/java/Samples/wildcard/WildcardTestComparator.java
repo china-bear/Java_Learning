@@ -26,28 +26,29 @@ public class WildcardTestComparator {
         }
 
     }
-}
 
-class Comparator1 implements Comparator<Animal> {
+    static class Comparator1 implements Comparator<Animal> {
 
-    @Override
-    public int compare(Animal o1, Animal o2) {
-        return o1.name.compareTo(o2.name);
+        @Override
+        public int compare(Animal o1, Animal o2) {
+            return o1.name.compareTo(o2.name);
+        }
+    }
+
+    static class Comparator2 implements Comparator<Cat>{
+
+        @Override
+        public int compare(Cat o1, Cat o2) {
+            return o1.age - o2.age;
+        }
+    }
+
+    static class Comparator3 implements Comparator<MiniCat>{
+
+        @Override
+        public int compare(MiniCat o1, MiniCat o2) {
+            return o1.level - o2.level ;
+        }
     }
 }
 
-class Comparator2 implements Comparator<Cat>{
-
-    @Override
-    public int compare(Cat o1, Cat o2) {
-        return o1.age - o2.age;
-    }
-}
-
-class Comparator3 implements Comparator<MiniCat>{
-
-    @Override
-    public int compare(MiniCat o1, MiniCat o2) {
-        return o1.level - o2.level ;
-    }
-}

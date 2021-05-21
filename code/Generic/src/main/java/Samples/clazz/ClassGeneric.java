@@ -59,7 +59,10 @@ public class ClassGeneric<T> {
         // 同一泛型类型，根据不同的数据类型创建的对象，本质是同一类型
         System.out.println(intGeneric.getClass());
         System.out.println(strGeneric.getClass());
-        System.out.println(intGeneric.getClass() == strGeneric.getClass());
+        System.out.println(generic.getClass());
 
+        System.out.println("--------------------------------");
+        System.out.println(intGeneric.getClass() == strGeneric.getClass());
+        System.out.println(intGeneric.getClass() == generic.getClass());
     }
 }

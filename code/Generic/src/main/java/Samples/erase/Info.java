@@ -1,4 +1,4 @@
-package demo.erase;
+package Samples.erase;
 
 public interface Info<T> {
 

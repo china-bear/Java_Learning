@@ -89,5 +89,16 @@ public class ProductGetter<T> {
         System.err.println("-----------------------------------------------");
         ProductGetter.print(1,2,3,4,5);
         ProductGetter.print("a",3,"name");
+
+        // 非泛型方法实现
+        ProductGetter<String> stringProductGetter = new ProductGetter<>();     // 创建抽奖器对象, 指定数据类型
+        String[] strProduct = {"苹果手机","华为手机","扫地机器人","咖啡机"};
+
+        for (int i = 0; i < strProduct.length; i++) {
+            stringProductGetter.addProduct(strProduct[i]);    // 给抽奖器填充奖品
+        }
+        // 抽奖
+        String product2 = stringProductGetter.getProduct();
+        System.out.println("恭喜你, 你抽中了：" + product2);
     }
 }

@@ -22,7 +22,7 @@ public class WildcardTestDown {
 
     }
 
-    /**
+    /**  ? 代替具体的类型实参,不是类型形参
      * 泛型下限通配符，传递的集合类型，只能是Cat或Cat的父类类型
      * @param list
      */

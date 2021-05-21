@@ -1,4 +1,4 @@
-package demo.erase;
+package Samples.erase;
 
 /**
  * @program: Java_Learning

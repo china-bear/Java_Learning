@@ -18,9 +18,9 @@ public class WildcardTest01 {
         showBox(box2);
 
     }
-
-    // Box Number泛型类型 不能理解成多态 和 方法重载（泛型类型实际同一类型所有不能重载），只能通过类型通配符实现
-/*    public static void showBox(Box<Number> box) {
+/**
+ * Box Number泛型类型 不能理解成多态 和 方法重载（由于类型擦除，泛型类型实际同一类型所有不能重载），只能通过类型通配符实现
+   public static void showBox(Box<Number> box) {
         Number size = box.getSize();
         System.out.println(size);
     }
@@ -28,8 +28,10 @@ public class WildcardTest01 {
     public static void showBox(Box<Integer> box) {
         Number size = box.getSize();
         System.out.println(size);
-    }*/
+    }
+ */
 
+// <?>无限制通配符：表示我们可以传入任意类型的参数,类型通配符是类型实参，而不是类型形参
     public static void showBox(Box<?> box) {
         Object size = box.getSize();
         System.out.println(size);

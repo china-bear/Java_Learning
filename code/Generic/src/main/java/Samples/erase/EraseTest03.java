@@ -1,11 +1,11 @@
-package demo.erase;
+package Samples.erase;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
  * @program: Java_Learning
- * @description: 类型擦除(有限、方法、桥接)
+ * @description: 类型擦除(有限、方法、桥接)  通过反射泛型，获取参数化类型中 实际的类型
  * @author: Mr.Bear
  * @create: 2020-09-13 11:16
  **/

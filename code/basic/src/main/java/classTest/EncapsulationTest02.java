@@ -47,17 +47,20 @@ public class EncapsulationTest02 {
     }
 
     public void print() {
-        System.out.println("会员信息：姓名：" + name + ", 年龄：" + age + "!");
+        System.out.println("\t\t\t会员信息\n姓名：" + name + ", 年龄：" + age + "!");
     }
 
     public static void main(String[] args) {
         EncapsulationTest02 p = new EncapsulationTest02("10001", 100);
+        System.out.println("=======================================");
         EncapsulationTest02 person = new EncapsulationTest02();
-        System.out.println("输入会员信息：");
+        System.out.println("=======================================");
+
+        System.out.println("\t\t\t输入会员信息");
         Scanner input = new Scanner(System.in);
-        System.out.println("请输入姓名：");
+        System.out.print("请输入姓名：");
         person.setName(input.next());
-        System.out.println("请输入年龄：");
+        System.out.print("请输入年龄：");
         person.setAge(input.nextInt());
 
         person.print();

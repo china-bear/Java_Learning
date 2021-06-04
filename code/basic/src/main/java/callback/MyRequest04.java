@@ -2,6 +2,7 @@ package callback;
 
 /**
  * https://juejin.cn/post/6844904066129084429
+ * https://zhuanlan.zhihu.com/p/221949207  Lambda讲解与应用
  * Java 实现回调的四种写法：
  * 1 反射
  * 2 直接调用

@@ -1,3 +1,5 @@
+package classTest;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -6,7 +8,7 @@ import java.util.List;
  * https://juejin.cn/post/6844903965163798536
  * https://zhuanlan.zhihu.com/p/90815478
  */
-public class main {
+public class LambdaTest {
 
 
     public static void main(String[] args) {
@@ -20,8 +22,16 @@ public class main {
 */
 
 /** Lambda表达式与匿名类的区别
- * 关键词的区别：对于匿名类，关键词this指向匿名类，而对于Lambda表达式，关键词this指向包围Lambda表达式的类的外部类，也就是说跟表达式外面使用this表达的意思是一样。
- * 编译方式：Java编译器编译Lambda表达式时，会将其转换为类的私有方法，再进行动态绑定，通过invokedynamic指令进行调用。而匿名内部类仍然是一个类，编译时编译器会自动为该类取名并生成class文件
+ *
+ * 1. 关键词的区别：对于匿名类，关键词this指向匿名类，而对于Lambda表达式，关键词this指向包围Lambda表达式的类的外部类，也就是说跟表达式外面使用this表达的意思是一样。
+ *
+ * 2. 编译方式：内部类在编译期生成新类，而Lambda借助invokedynamic指令在运行时动态生成,具有更高的灵活性; Lambda的执行逻辑保留在原类的lambda方法中，内部类则放到新生成的类文件中
+
+ * 3. 所需类型不同 匿名内部类：可以是接口，也可以是抽象类，还可以是具体类。 Lambda表达式：只能是接口
+ *
+ * 4.使用限制不同 如果接口中有且仅有一个抽象方法，可以使用Lambda表达式，也可以使用匿名内部类。 如果接口中多于一个抽象方法，那么只能使用匿名内部类，而不能使用Lambda表达式。
+ *
+ * 5. 实现原理不同  匿名内部类编译之后会产生一个单独的.class字节码文件;  Lambda表达式编译之后不会产生一个单独的.class字节码文件。对应的字节码会在运行的时候动态生成。
 
  */
 

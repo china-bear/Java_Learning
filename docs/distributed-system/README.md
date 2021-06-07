@@ -1,4 +1,7 @@
 # 分布式系统
+http://oceanbase.org.cn/
+https://raft.github.io/
+
 
 ## [面试连环炮](/docs/distributed-system/distributed-system-interview.md)
 

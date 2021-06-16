@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public class Person implements Serializable {
 
-    // serialVersionUID是用来验证对象版本一致性的
+    // serialVersionUID是用来验证对象版本一致性的, 强烈建议所有要序列化的类都显示地声明serialVersionUID字段
     private static final long serialVersionUID = 1L;
 
     private String name;

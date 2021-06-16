@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 
 
-public class MainTest01 {
+public class AvroSerializeTest {
     public static void main(String[] args) throws IOException {
 
         // 方法一 通过avro-maven-plugin 或 avro-tools 生成avro的java类 序列化和反序列化  https://avro.apache.org/docs/1.8.2/gettingstartedjava.html#download_install

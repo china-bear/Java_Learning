@@ -13,7 +13,7 @@ public class WordProcess {
 
     public List<String> wordList = loadList();
 
-    public <T> T execute(CallbackInterface callbackInterface) {
+    public <T> T execute(WordProcessCallback callbackInterface) {
         // 可以执行一些execute的逻辑
 
         // 直接将相关词库的操作权都交给了 callbackInterface
@@ -40,7 +40,7 @@ public class WordProcess {
         WordProcess loadWord = new WordProcess();
 
         // 实现词库元素的删除
-        loadWord.execute(new CallbackInterface() {
+        loadWord.execute(new WordProcessCallback() {
             @Override
             public Object process(List param) {
                 List<String> wordList = param;
@@ -50,7 +50,7 @@ public class WordProcess {
         });
 
         // 实现词库元素的添加
-        loadWord.execute(new CallbackInterface() {
+        loadWord.execute(new WordProcessCallback() {
             @Override
             public Object process(List param) {
                 List<String> wordList = param;

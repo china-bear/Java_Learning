@@ -2,6 +2,7 @@ package fileTest;
 import java.io.File;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -40,16 +41,40 @@ public class JavaFilePath {
             System.out.println(getPathParent(str, 47));
             System.out.println(getFileName(str, 47));
 
+            // java获取classpath文件路径空格转变成了转义字符%20的问题
+            JavaFilePath classPath = new JavaFilePath();
+            classPath.printClassPath();
 
     }
+    // java获取classpath文件路径空格转变成了转义字符%20的问题  https://www.shuzhiduo.com/A/A7zgjjrod4/
+    private  void printClassPath() throws URISyntaxException, UnsupportedEncodingException {
+        String classPath;
 
-        private static void printPaths(File file) throws IOException {
-            System.out.println("Absolute Path: " + file.getAbsolutePath());
-            System.out.println("Canonical Path: " + file.getCanonicalPath());
-            System.out.println("Path: " + file.getPath());
+        // 如果当前路径中包含了空格，则返回的路径字符串空格则被转义为(%20)
+        classPath = getClass().getResource("/").getPath();
+        System.out.println(classPath);
+        // 如果当前路径中包含了空格，则返回的路径字符串空格则被转义为(%20)
+        classPath = getClass().getClassLoader().getResource("").getPath();
+        System.out.println(classPath);
 
-            System.out.println("=========================================");
-        }
+        // 解决空格转变成了转义字符%20 3种办法
+
+        System.out.println(java.net.URLDecoder.decode(classPath,"UTF-8"));
+
+        classPath= getClass().getResource("/").toURI().getPath();  // getResource方法返回的是一个URL对象,toURI()是将RUL对象转换为URI对象.
+        System.out.println(classPath);
+
+        classPath= getClass().getClassLoader().getResource("").toURI().getPath();
+        System.out.println(classPath);
+    }
+
+    private static void printPaths(File file) throws IOException {
+        System.out.println("Absolute Path: " + file.getAbsolutePath());
+        System.out.println("Canonical Path: " + file.getCanonicalPath());
+        System.out.println("Path: " + file.getPath());
+
+        System.out.println("=========================================");
+    }
 
     public static String getFileName(String pathStr, int delim) {
         int pos = pathStr.lastIndexOf(delim);
@@ -63,9 +88,9 @@ public class JavaFilePath {
         }
     }
 
-
-        public static String getPathParent(String pathStr, int delim) {
-            int pos = pathStr.lastIndexOf(delim);
-            return  pos < 0 ?  null : pathStr.substring(0, pos);
-        }
+    public static String getPathParent(String pathStr, int delim) {
+        int pos = pathStr.lastIndexOf(delim);
+        return  pos < 0 ?  null : pathStr.substring(0, pos);
     }
+
+}

@@ -21,23 +21,31 @@
  * THE SOFTWARE.
  */
 
-package Idiom.callback;
+package creational.factory.simple.cardemo;
 
-import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Template-method class for callback hook execution.
+ * Factory is an object for creating other objects, it providing Providing a static method to 
+ * create and return objects of varying classes, in order to hide the implementation logic 
+ * and makes client code focus on usage rather then objects initialization and management.
+ * 
+ * <p>In this example the CarFactory is the factory class and it provides a static method to 
+ * create different cars.
  */
-public abstract class Task {
 
+public class App {
+  
+  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+  
   /**
-   * Execute with callback.
+   * Program main entry point.
    */
-  final void executeWith(Callback callback) {
-    execute();
-    Optional.ofNullable(callback).ifPresent(Callback::call);  //Java中的方法引用 类名::方法名, java 8里引入lambda后的一种用法
-
+  public static void main(String[] args) {
+    Car car1 = CarsFactory.getCar(CarType.FORD);
+    Car car2 = CarsFactory.getCar(CarType.FERRARI);
+    LOGGER.info(car1.getDescription());
+    LOGGER.info(car2.getDescription());
   }
-
-  public abstract void execute();
 }

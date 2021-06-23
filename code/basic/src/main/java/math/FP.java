@@ -1,4 +1,4 @@
-package temTest;
+package math;
 
 import java.math.BigDecimal;
 

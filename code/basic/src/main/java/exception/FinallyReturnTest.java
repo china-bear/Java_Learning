@@ -5,9 +5,12 @@ package exception;
  */
 public class FinallyReturnTest {
 
-    /* 执行顺序： 执行try块，执行到return语句时，先执行return的语句，--exitValue，但是不返回到main方法，继续执行finally块，
-    遇到finally块中的return语句，执行--exitValue,并将值返回到main方法，这里就不会再回去返回try块中计算得到的值，返回值是finally中的return返回的值
-    https://developer.ibm.com/zh/articles/j-lo-exception-misdirection/  Java 异常处理的误区和经验总结 */
+    /**
+     *  执行顺序： 执行try块，执行到return语句时，先执行return的语句，--exitValue，但是不返回到main方法，继续执行finally块，
+     *  遇到finally块中的return语句，执行--exitValue,并将值返回到main方法，这里就不会再回去返回try块中计算得到的值，返回值是finally中的return返回的值
+     *  https://developer.ibm.com/zh/articles/j-lo-exception-misdirection/  Java 异常处理的误区和经验总结
+     *  https://juejin.cn/post/6844903981299433479  Java 异常处理的 20 个最佳实践
+    */
 
     public static  int NoException1(){
 

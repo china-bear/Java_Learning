@@ -16,7 +16,7 @@ public class MysqlDemo {
         //驱动程序名称
         String driver = "com.mysql.jdbc.Driver";
         // jdbc url
-        String url = "jdbc:mysql://10.172.175.222:3301/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false";
+        String url = "jdbc:mysql://10.172.175.xxx:3301/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false";
         // mysql 账号和密码
         String user = "admin";
         String password = "admin@360";

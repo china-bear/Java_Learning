@@ -15,7 +15,6 @@
         <module>code/database</module>
         <module>code/basic</module>
         <module>code/collection-framework</module>
-        <module>code/Lambda</module>
         <module>code/Annotation</module>
         <module>code/Encryption</module>
         <module>code/UnitTest</module>
@@ -27,6 +26,7 @@
         <module>code/concurrency</module>
         <module>code/design-patterns</module>
         <module>code/jvm</module>
+        <module>code/functional-programming</module>
     </modules>
 
     <properties>
@@ -54,7 +54,7 @@
         <mysql.version>5.1.49</mysql.version>
         <druid.version>1.1.23</druid.version>
 
-        <log4j.version>1.2.17</log4j.version>
+        <jedis.version>3.5.2</jedis.version>
 
         <junit-jupiter.version>5.7.0</junit-jupiter.version>
 
@@ -68,7 +68,7 @@
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.xxx.209.63:8081/repository/data-releases/</url>
+            <url>http://10.209.209.xxx:8081/repository/data-releases/</url>
         </repository>
         <repository>
             <id>public</id>
@@ -81,12 +81,12 @@
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.xxx.209.63:8081/repository/data-releases/</url>
+            <url>http://10.209.209.xxx:8081/repository/data-releases/</url>
         </repository>
         <snapshotRepository>
             <id>data-snapshots</id>
             <name>Data Platform Snapshots</name>
-            <url>http:/10.xxx.209.63:8081/repository/data-releases/</url>
+            <url>http:/10.209.209.xxx:8081/repository/data-releases/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -204,6 +204,14 @@
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
 
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter  是常用JUnit5 模块的聚合包-->
             <dependency>

@@ -4,15 +4,21 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 项目初始化
+ * 引入Lambda就是为了简化代码，可以使代码变的更加简洁紧凑， 允许把函数作为一个方法的参数传递进方法中， Lambda表达式也可以称作Java中的闭包。
+ * Lambda表达式是一种匿名函数(对Java而言这并不完全准确)，通俗的说，它是没有声明的方法，即没有访问修饰符、返回值声明和名字的方法。
+ * Lambda表达式的使用场景与匿名类的使用场景几乎一致，都是在某个功能（方法）只使用一次的时候。
+ *
  * https://juejin.cn/post/6844903965163798536
  * https://zhuanlan.zhihu.com/p/90815478
  */
 public class LambdaTest {
-
-
     public static void main(String[] args) {
 /**
+ * Lambda表达式通常使用(param)->(body)语法书写，基本格式如下：
+ * 没有参数：  () -> body
+ * 1个参数： (param) -> body 或 (param) ->{ body; }
+ * 多个参数： (param1, param2...) -> { body } 或 (type1 param1, type2 param2...) -> { body }
+ *
  * 方法引用，双冒号操作 [方法引用]的格式是，类名::方法名。
  * 无参数情况
  * NoParamInterface paramInterface2 = ()-> new HashMap<>(); 可替换为 NoParamInterface paramInterface1 = HashMap::new;

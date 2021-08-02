@@ -14,44 +14,45 @@ public class StaticTest01 {
 
     //非静态代码块
     {
-        System.out.print("非静态代码块！-->");
+        System.out.print("非静态代码块 -->");
     }
 
-    //静态代码块  具有最高的优先级
-    // 类加载的时候，就被执行了
+    //静态代码块  具有最高的优先级, 类加载的时候就被执行了
     static {
-        System.out.print("静态代码块！-->");
+        System.out.print("静态代码块 -->");
     }
+
+
 
     private static void test1() {
-        System.out.print("静态方法test1中的内容1! -->");
+        System.out.print("静态方法test1中的内容 第一行开始 -->");
         {
-            System.out.print("静态方法test1中的代码块！-->");
+            System.out.print("静态方法test1中的代码块 -->");
         }
-        System.out.print("静态方法test1中的内容2! -->");
+        System.out.print("静态方法test1中的内容 最后一行结束 -->");
     }
 
     private  void test2() {
-        System.out.print("方法test2中的内容1! -->");
+        System.out.print("方法test2中的内容 第一行开始! -->");
         {
             System.out.print("方法test2中的代码块！-->");
         }
-        System.out.print("方法test2中的内容2! -->");
+        System.out.print("方法test2中的内容 最后一行结束! -->");
     }
 
     public static void main(String[] args) {
         // 类方法 直接调用
         test1();  //静态代码块！-->静态方法test1中的内容1! -->静态方法test1中的代码块！-->静态方法test1中的内容2! -->
 
-        System.out.println();System.out.println();
+        System.out.println();System.out.println("================================================================");
 
         StaticTest01 staticTest = new StaticTest01();  // 非静态代码块！-->默认构造方法！-->
 
-        System.out.println();System.out.println();
+        System.out.println();System.out.println("================================================================");
 
         staticTest.test1();//静态方法test1中的内容1! -->静态方法test1中的代码块！-->静态方法test1中的内容2! -->
 
-        System.out.println();System.out.println();
+        System.out.println();System.out.println("================================================================");
 
         staticTest.test2();//方法test2中的内容1! -->方法test2中的代码块！-->方法test2中的内容2! -->
     }

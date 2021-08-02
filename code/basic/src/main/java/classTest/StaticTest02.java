@@ -41,10 +41,11 @@ class Leaf extends Mid{
     static {
         System.out.println("Leaf静态代码块");
     }
-    {
-        System.out.println("Leaf非静态代码块");
-    }
     public Leaf() {
         System.out.println("Leaf构造器");
     }
+    {
+        System.out.println("Leaf非静态代码块");
+    }
+
 }

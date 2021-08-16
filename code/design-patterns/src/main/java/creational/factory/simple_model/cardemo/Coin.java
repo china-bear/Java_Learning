@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2014-2021 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,35 +23,11 @@
 
 package creational.factory.simple_model.cardemo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
- * Factory is an object for creating other objects, it providing Providing a static method to 
- * create and return objects of varying classes, in order to hide the implementation logic 
- * and makes client code focus on usage rather then objects initialization and management.
- * 
- * <p>In this example the CarFactory is the factory class and it provides a static method to 
- * create different cars.
+ * Coin interface.
  */
+public interface Coin {
 
-public class App {
-  
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
-  
-  /**
-   * Program main entry point.
-   */
-  public static void main(String[] args) {
-    Car car1 = CarsFactory.getCar(CarType.FORD);
-    Car car2 = CarsFactory.getCar(CarType.FERRARI);
-    LOGGER.info(car1.getDescription());
-    LOGGER.info(car2.getDescription());
+  String getDescription();
 
-    LOGGER.info("The alchemist begins his work.");
-    Coin coin1 = CoinFactory.getCoin(CoinType.COPPER);
-    Coin coin2 = CoinFactory.getCoin(CoinType.GOLD);
-    LOGGER.info(coin1.getDescription());
-    LOGGER.info(coin2.getDescription());
-  }
 }

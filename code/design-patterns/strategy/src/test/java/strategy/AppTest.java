@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2014-2021 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,30 +21,19 @@
  * THE SOFTWARE.
  */
 
-package behavioral.template_method;
+package strategy;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 /**
- * HitAndRunMethod implementation of {@link StealingMethod}.
+ * Application test.
  */
-public class HitAndRunMethod extends StealingMethod {
+class AppTest {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(HitAndRunMethod.class);
-
-  @Override
-  protected String pickTarget() {
-    return "old goblin woman";
-  }
-
-  @Override
-  protected void confuseTarget(String target) {
-    LOGGER.info("Approach the {} from behind.", target);
-  }
-
-  @Override
-  protected void stealTheItem(String target) {
-    LOGGER.info("Grab the handbag and run away fast!");
+  @Test
+  void shouldExecuteWithoutException() {
+    assertDoesNotThrow(() -> App.main(new String[]{}));
   }
 }

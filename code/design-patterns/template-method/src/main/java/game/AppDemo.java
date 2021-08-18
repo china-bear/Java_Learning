@@ -1,6 +1,6 @@
-package behavioral.template;
+package game;
 
-public class TemplatePatternDemo {
+public class AppDemo {
 
     public static void main(String[] args) {
         Game game = new Cricket();

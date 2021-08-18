@@ -21,24 +21,30 @@
  * THE SOFTWARE.
  */
 
-package behavioral.template_method;
+package thief;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Halfling thief uses {@link StealingMethod} to steal.
+ * HitAndRunMethod implementation of {@link StealingMethod}.
  */
-public class HalflingThief {
+public class HitAndRunMethod extends StealingMethod {
 
-  private StealingMethod method;
+  private static final Logger LOGGER = LoggerFactory.getLogger(HitAndRunMethod.class);
 
-  public HalflingThief(StealingMethod method) {
-    this.method = method;
+  @Override
+  protected String pickTarget() {
+    return "old goblin woman";
   }
 
-  public void steal() {
-    method.steal();
+  @Override
+  protected void confuseTarget(String target) {
+    LOGGER.info("Approach the {} from behind.", target);
   }
 
-  public void changeMethod(StealingMethod method) {
-    this.method = method;
+  @Override
+  protected void stealTheItem(String target) {
+    LOGGER.info("Grab the handbag and run away fast!");
   }
 }

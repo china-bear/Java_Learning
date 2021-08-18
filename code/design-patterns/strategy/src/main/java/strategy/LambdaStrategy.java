@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2014-2021 Ilkka Seppälä
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,31 +21,33 @@
  * THE SOFTWARE.
  */
 
-package behavioral.template_method;
+package strategy;
+
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-/**
- * StealingMethod defines skeleton for the algorithm.
- */
-public abstract class StealingMethod {
+import static org.slf4j.LoggerFactory.getLogger;
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(StealingMethod.class);
+public class LambdaStrategy {
 
-  protected abstract String pickTarget();
+  private static final Logger LOGGER = getLogger(LambdaStrategy.class);
+  public enum Strategy implements DragonSlayingStrategy {
+    MeleeStrategy(() -> LOGGER.info(
+        "With your Excalibur you severe the dragon's head!")),
+    ProjectileStrategy(() -> LOGGER.info(
+        "You shoot the dragon with the magical crossbow and it falls dead on the ground!")),
+    SpellStrategy(() -> LOGGER.info(
+        "You cast the spell of disintegration and the dragon vaporizes in a pile of dust!"));
 
-  protected abstract void confuseTarget(String target);
+    private final DragonSlayingStrategy dragonSlayingStrategy;
 
-  protected abstract void stealTheItem(String target);
+    Strategy(DragonSlayingStrategy dragonSlayingStrategy) {
+      this.dragonSlayingStrategy = dragonSlayingStrategy;
+    }
 
-  /**
-   * Steal.
-   */
-  public void steal() {
-    String target = pickTarget();
-    LOGGER.info("The target has been chosen as {}.", target);
-    confuseTarget(target);
-    stealTheItem(target);
+    @Override
+    public void execute() {
+      dragonSlayingStrategy.execute();
+    }
   }
 }

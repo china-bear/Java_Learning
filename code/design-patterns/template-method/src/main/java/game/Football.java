@@ -1,4 +1,4 @@
-package behavioral.template;
+package game;
 
 public class Football extends Game {
 

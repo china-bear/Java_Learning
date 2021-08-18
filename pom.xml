@@ -56,7 +56,7 @@
 
         <jedis.version>3.5.2</jedis.version>
 
-        <junit-jupiter.version>5.7.0</junit-jupiter.version>
+        <junit-jupiter.version>5.7.1</junit-jupiter.version>
 
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -68,7 +68,7 @@
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.209.209.xxx:8081/repository/data-releases/</url>
+            <url>http://10.209.209.63:8081/repository/data-releases/</url>
         </repository>
         <repository>
             <id>public</id>
@@ -81,12 +81,12 @@
         <repository>
             <id>data-releases</id>
             <name>Data Platform Releases</name>
-            <url>http://10.209.209.xxx:8081/repository/data-releases/</url>
+            <url>http://10.209.209.63:8081/repository/data-releases/</url>
         </repository>
         <snapshotRepository>
             <id>data-snapshots</id>
             <name>Data Platform Snapshots</name>
-            <url>http:/10.209.209.xxx:8081/repository/data-releases/</url>
+            <url>http:/10.209.209.63:8081/repository/data-releases/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -217,6 +217,13 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
                 <version>${junit-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>

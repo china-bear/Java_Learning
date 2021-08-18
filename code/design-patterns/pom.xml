@@ -11,12 +11,34 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>design-patterns</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>double-buffer</module>
+        <module>singleton</module>
+        <module>factory-method</module>
+        <module>factory-simple</module>
+        <module>factory-abstract</module>
+        <module>factory-kit</module>
+        <module>callback</module>
+    </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

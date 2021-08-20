@@ -64,6 +64,7 @@ public class App {
     dragonSlayer.goToBattle();
 
     // Java 8 functional implementation Strategy pattern
+    System.out.println("===================================================================");
     LOGGER.info("Green dragon spotted ahead!");
     dragonSlayer = new DragonSlayer(
         () -> LOGGER.info("With your Excalibur you severe the dragon's head!"));
@@ -78,6 +79,7 @@ public class App {
     dragonSlayer.goToBattle();
 
     // Java 8 lambda implementation with enum Strategy pattern
+    System.out.println("===================================================================");
     LOGGER.info("Green dragon spotted ahead!");
     dragonSlayer.changeStrategy(LambdaStrategy.Strategy.MeleeStrategy);
     dragonSlayer.goToBattle();

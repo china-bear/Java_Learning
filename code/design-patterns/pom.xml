@@ -21,6 +21,10 @@
         <module>factory-abstract</module>
         <module>factory-kit</module>
         <module>callback</module>
+        <module>template-method</module>
+        <module>strategy</module>
+        <module>bridge</module>
+        <module>adapter</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->
@@ -38,6 +42,12 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

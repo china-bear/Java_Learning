@@ -72,6 +72,10 @@ blacksmith.manufactureWeapon(WeaponType.AXE);
 * 一个类想要它的子类来指定它要创建的对象
 * 类将责任委派给几个帮助子类中的一个，而你想定位了解是具体之中的哪一个
 
+## 模板方法 与 策略模式 比较
+* 模板方法模式： compile-time algorithm selection by subclassing
+* 策略模式：run-time algorithm selection by containment
+
 ## Java中的例子
 
 * [java.util.Calendar](http://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html#getInstance--)

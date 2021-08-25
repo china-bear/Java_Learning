@@ -45,15 +45,23 @@
 ![依赖关系](../images/uml-dependency-model.jpg)     
 
 ### 关联、聚合、组合之间的关系
+依赖, 关联, 聚合, 组合都是利用关系, 区别是生命周期的相关性   
+* 依赖: 用完就扔
+* 关联: 聚合:不属于我, 但是用完先放着
+* 组合: 是我的一部分, 用完保存好
    
 ![关联-聚合-组合 三者关系](../images/uml-model-relat.jpg)    
+
 ## 总结
 * 实箭泛化虚实现
 * 虚线依赖实关联
 * 空菱聚合实组合
-* 项目沟通图常见    
+* 项目沟通图常见 
+* <font color=red>**依赖->关联->聚合->组合->继承->实现 耦合度依次增强, 划分模块的一个准则就是高内聚低耦合**</font>
+
     
 ![UML规范](../images/uml-all-model.jpg)    
 
 ##参考
-[UML规范](https://zhuanlan.zhihu.com/p/65065260)  
+[UML规范](https://zhuanlan.zhihu.com/p/65065260) 
+[设计模式之 UML 类图](https://zhuanlan.zhihu.com/p/24576502) 

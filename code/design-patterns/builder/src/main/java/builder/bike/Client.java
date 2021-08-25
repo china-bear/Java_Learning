@@ -12,8 +12,12 @@ public class Client {
         Director director = new Director(new MobileBuilder());
         //让指挥者只会组装自行车
         Bike bike = director.construct();
+        System.out.println(bike);
 
-        System.out.println(bike.getFrame());
-        System.out.println(bike.getSeat());
+        //创建指挥者对象
+        director = new Director(new OfoBuilder());
+        //让指挥者只会组装自行车
+        bike = director.construct();
+        System.out.println(bike);
     }
 }

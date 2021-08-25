@@ -27,4 +27,12 @@ public class Bike {
     public void setSeat(String seat) {
         this.seat = seat;
     }
+
+    @Override
+    public String toString() {
+        return "Bike{" +
+                "frame='" + frame + '\'' +
+                ", seat='" + seat + '\'' +
+                '}';
+    }
 }

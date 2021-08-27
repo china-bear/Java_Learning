@@ -1,0 +1,26 @@
+#
+
+## ==  &  equals
+
+## equals和hashCode同时存在的意义
+
+* equals - 保证比较对象是否是绝对相等的， 保证可靠
+* hashCode - 保证在最快的时间内判断两个对象是否相等，可能有误差值， 保证性能
+* 使用 HashMap、HashSet、HashTable 时一定要注意 hashCode。
+
+
+## hashCode 与 equals
+* *两个相等的对象必须具有相等的散列码（Java关键约定）*
+* 如果两个对象相等，则hashcode一定也是相同的
+* 两个对象相等,对两个对象分别调用equals方法都返回true
+* 两个对象有相同的hashcode值，它们可能不相等(hash碰撞的时候)
+* 因此，equals 方法被覆盖过，则 hashCode 方法也必须被覆盖
+* hashCode() 的默认行为是对堆上的对象产生独特值。如果没有重写 hashCode()，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）
+
+
+## 对象的比较过程
+![alt text](./JAVA对象比较过程.jpg)
+
+## 参考资料
+* [重写equals方法后重写hashCode方法的必要性](https://zhuanlan.zhihu.com/p/30321358)    
+* [为什么重写equals时必须重写hashCode方法](https://juejin.cn/post/6844903854639693837)    

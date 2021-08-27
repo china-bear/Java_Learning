@@ -22,7 +22,11 @@ public class ObjCopyTest02 {
 
         //user2修改了name之后并没有影响user1的name,这说明user2和user1对象是独立的。
         System.out.println("user1 的name"+user1.getName());
+
         //user2修改了teacher 对象属性之后user1的teacher对象属性也同时改变了，这说明对象的clone方法并不会把其对象中引用的其他对象进行拷贝，这也是我们俗称的浅拷贝
         System.out.println("user1 的techerName"+user1.getTeacher().getTeacherName());
+
+        //判断USER1 和 USER2 对象是否是同一个对象
+        System.out.println("user1 和 user2 是同一个对象? " + (user1 == user2));
     }
 }

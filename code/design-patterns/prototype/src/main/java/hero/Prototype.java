@@ -21,31 +21,13 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
 
 /**
- * Mage.
+ * Prototype.
  */
+public interface Prototype {
 
-public abstract class Mage implements Prototype {
-
-  public Mage() {
-  }
-
-  public Mage(Mage source) {
-  }
-
-  @Override
-  public int hashCode() {
-    return super.hashCode();
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    return super.equals(obj);
-  }
-
-  @Override
-  public abstract Mage copy();
+  Object copy();
 
 }

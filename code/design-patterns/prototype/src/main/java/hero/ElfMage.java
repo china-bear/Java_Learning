@@ -21,24 +21,24 @@
  * THE SOFTWARE.
  */
 
-package prototype;
-
+package hero;
 
 
 /**
- * Beast.
+ * ElfMage.
  */
 
-public abstract class Beast implements Prototype {
-  public Beast() {
+public class ElfMage extends Mage {
+
+  private final String helpType;
+
+  public ElfMage(String helpType) {
+    this.helpType = helpType;
   }
 
-  public Beast(Beast source) {
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    return super.equals(obj);
+  public ElfMage(ElfMage elfMage) {
+    super(elfMage);
+    this.helpType = elfMage.helpType;
   }
 
   @Override
@@ -47,6 +47,18 @@ public abstract class Beast implements Prototype {
   }
 
   @Override
-  public abstract Beast copy();
+  public boolean equals(Object obj) {
+    return super.equals(obj);
+  }
+
+  @Override
+  public ElfMage copy() {
+    return new ElfMage(this);
+  }
+
+  @Override
+  public String toString() {
+    return "Elven mage helps in " + helpType;
+  }
 
 }

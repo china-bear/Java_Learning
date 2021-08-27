@@ -21,55 +21,32 @@
  * THE SOFTWARE.
  */
 
-package prototype;
-
-
+package hero;
 
 /**
- * Concrete factory class.
+ * ElfWarlord.
  */
 
-public class HeroFactoryImpl implements HeroFactory {
+public class ElfWarlord extends Warlord {
 
-  private final Mage mage;
-  private final Warlord warlord;
-  private final Beast beast;
+  private final String helpType;
 
-  public HeroFactoryImpl(Mage mage, Warlord warlord, Beast beast) {
-    this.mage = mage;
-    this.warlord = warlord;
-    this.beast = beast;
+  public ElfWarlord(String helpType) {
+    this.helpType = helpType;
+  }
+
+  public ElfWarlord(ElfWarlord elfWarlord) {
+    super(elfWarlord);
+    this.helpType = elfWarlord.helpType;
   }
 
   @Override
-  public int hashCode() {
-    return super.hashCode();
+  public ElfWarlord copy() {
+    return new ElfWarlord(this);
   }
 
   @Override
-  protected Object clone() throws CloneNotSupportedException {
-    return super.clone();
+  public String toString() {
+    return "Elven warlord helps in " + helpType;
   }
-
-  /**
-   * Create mage.
-   */
-  public Mage createMage() {
-    return mage.copy();
-  }
-
-  /**
-   * Create warlord.
-   */
-  public Warlord createWarlord() {
-    return warlord.copy();
-  }
-
-  /**
-   * Create beast.
-   */
-  public Beast createBeast() {
-    return beast.copy();
-  }
-
 }

@@ -21,27 +21,23 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
 
 /**
- * ElfBeast.
+ * OrcMage.
  */
-public class ElfBeast extends Beast {
 
-  private final String helpType;
+public class OrcMage extends Mage {
 
-  public ElfBeast( String helpType) {
-    this.helpType = helpType;
+  private final String weapon;
+
+  public OrcMage(String weapon) {
+    this.weapon = weapon;
   }
 
-  public ElfBeast(ElfBeast elfBeast) {
-    super(elfBeast);
-    this.helpType = elfBeast.helpType;
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    return super.equals(obj);
+  public OrcMage(OrcMage orcMage) {
+    super(orcMage);
+    this.weapon = orcMage.weapon;
   }
 
   @Override
@@ -50,13 +46,18 @@ public class ElfBeast extends Beast {
   }
 
   @Override
-  public ElfBeast copy() {
-    return new ElfBeast(this);
+  public boolean equals(Object obj) {
+    return super.equals(obj);
+  }
+
+  @Override
+  public OrcMage copy() {
+    return new OrcMage(this);
   }
 
   @Override
   public String toString() {
-    return "Elven eagle helps in " + helpType;
+    return "Orcish mage attacks with " + weapon;
   }
 
 }

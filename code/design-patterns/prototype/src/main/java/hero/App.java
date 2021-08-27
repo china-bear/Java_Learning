@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
 
 
 import org.slf4j.Logger;

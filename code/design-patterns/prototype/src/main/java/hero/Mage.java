@@ -21,19 +21,31 @@
  * THE SOFTWARE.
  */
 
-package prototype;
-
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-
-import org.junit.jupiter.api.Test;
+package hero;
 
 /**
- * Application test
+ * Mage.
  */
-class AppTest {
 
-  @Test
-  void shouldExecuteApplicationWithoutException() {
-    assertDoesNotThrow(() -> App.main(new String[]{}));
+public abstract class Mage implements Prototype {
+
+  public Mage() {
   }
+
+  public Mage(Mage source) {
+  }
+
+  @Override
+  public int hashCode() {
+    return super.hashCode();
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return super.equals(obj);
+  }
+
+  @Override
+  public abstract Mage copy();
+
 }

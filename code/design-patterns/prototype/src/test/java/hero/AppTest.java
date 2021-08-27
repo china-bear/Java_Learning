@@ -21,17 +21,19 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * Interface for the factory class.
+ * Application test
  */
-public interface HeroFactory {
+class AppTest {
 
-  Mage createMage();
-
-  Warlord createWarlord();
-
-  Beast createBeast();
-
+  @Test
+  void shouldExecuteApplicationWithoutException() {
+    assertDoesNotThrow(() -> App.main(new String[]{}));
+  }
 }

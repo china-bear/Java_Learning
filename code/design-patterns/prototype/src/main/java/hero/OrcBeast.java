@@ -21,31 +21,24 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
 
-
-import java.util.Objects;
 
 /**
- * OrcWarlord.
+ * OrcBeast.
  */
 
-public class OrcWarlord extends Warlord {
+public class OrcBeast extends Beast {
 
   private final String weapon;
 
-  public OrcWarlord(String weapon) {
+  public OrcBeast(String weapon) {
     this.weapon = weapon;
   }
 
-  public OrcWarlord(Warlord source, String weapon) {
-    super(source);
-    this.weapon = weapon;
-  }
-
-  public OrcWarlord(OrcWarlord orcWarlord) {
-    super(orcWarlord);
-    this.weapon = orcWarlord.weapon;
+  public OrcBeast(OrcBeast orcBeast) {
+    super(orcBeast);
+    this.weapon = orcBeast.weapon;
   }
 
   @Override
@@ -55,17 +48,17 @@ public class OrcWarlord extends Warlord {
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode(), weapon);
+    return super.hashCode();
   }
 
   @Override
-  public OrcWarlord copy() {
-    return new OrcWarlord(this);
+  public OrcBeast copy() {
+    return new OrcBeast(this);
   }
 
   @Override
   public String toString() {
-    return "Orcish warlord attacks with " + weapon;
+    return "Orcish wolf attacks with " + weapon;
   }
 
 }

@@ -21,24 +21,17 @@
  * THE SOFTWARE.
  */
 
-package prototype;
-
+package hero;
 
 /**
- * OrcBeast.
+ * Warlord.
  */
 
-public class OrcBeast extends Beast {
-
-  private final String weapon;
-
-  public OrcBeast(String weapon) {
-    this.weapon = weapon;
+public abstract class Warlord implements Prototype {
+  public Warlord() {
   }
 
-  public OrcBeast(OrcBeast orcBeast) {
-    super(orcBeast);
-    this.weapon = orcBeast.weapon;
+  public Warlord(Warlord source) {
   }
 
   @Override
@@ -52,13 +45,6 @@ public class OrcBeast extends Beast {
   }
 
   @Override
-  public OrcBeast copy() {
-    return new OrcBeast(this);
-  }
-
-  @Override
-  public String toString() {
-    return "Orcish wolf attacks with " + weapon;
-  }
+  public abstract Warlord copy();
 
 }

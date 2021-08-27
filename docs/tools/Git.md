@@ -260,6 +260,7 @@ git branch -d feature_x
 git push origin 
 ```
 
+[git如何合并分支](https://www.jianshu.com/p/26d050497abb)
 ## 推荐
 
 **在线演示学习工具：**

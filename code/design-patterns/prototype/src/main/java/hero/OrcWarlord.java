@@ -21,17 +21,31 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
+
+
+import java.util.Objects;
 
 /**
- * Warlord.
+ * OrcWarlord.
  */
 
-public abstract class Warlord implements Prototype {
-  public Warlord() {
+public class OrcWarlord extends Warlord {
+
+  private final String weapon;
+
+  public OrcWarlord(String weapon) {
+    this.weapon = weapon;
   }
 
-  public Warlord(Warlord source) {
+  public OrcWarlord(Warlord source, String weapon) {
+    super(source);
+    this.weapon = weapon;
+  }
+
+  public OrcWarlord(OrcWarlord orcWarlord) {
+    super(orcWarlord);
+    this.weapon = orcWarlord.weapon;
   }
 
   @Override
@@ -41,10 +55,17 @@ public abstract class Warlord implements Prototype {
 
   @Override
   public int hashCode() {
-    return super.hashCode();
+    return Objects.hash(super.hashCode(), weapon);
   }
 
   @Override
-  public abstract Warlord copy();
+  public OrcWarlord copy() {
+    return new OrcWarlord(this);
+  }
+
+  @Override
+  public String toString() {
+    return "Orcish warlord attacks with " + weapon;
+  }
 
 }

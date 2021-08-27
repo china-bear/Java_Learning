@@ -21,32 +21,32 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
+
+
 
 /**
- * ElfWarlord.
+ * Beast.
  */
 
-public class ElfWarlord extends Warlord {
-
-  private final String helpType;
-
-  public ElfWarlord(String helpType) {
-    this.helpType = helpType;
+public abstract class Beast implements Prototype {
+  public Beast() {
   }
 
-  public ElfWarlord(ElfWarlord elfWarlord) {
-    super(elfWarlord);
-    this.helpType = elfWarlord.helpType;
+  public Beast(Beast source) {
   }
 
   @Override
-  public ElfWarlord copy() {
-    return new ElfWarlord(this);
+  public boolean equals(Object obj) {
+    return super.equals(obj);
   }
 
   @Override
-  public String toString() {
-    return "Elven warlord helps in " + helpType;
+  public int hashCode() {
+    return super.hashCode();
   }
+
+  @Override
+  public abstract Beast copy();
+
 }

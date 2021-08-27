@@ -21,13 +21,42 @@
  * THE SOFTWARE.
  */
 
-package prototype;
+package hero;
 
 /**
- * Prototype.
+ * ElfBeast.
  */
-public interface Prototype {
+public class ElfBeast extends Beast {
 
-  Object copy();
+  private final String helpType;
+
+  public ElfBeast( String helpType) {
+    this.helpType = helpType;
+  }
+
+  public ElfBeast(ElfBeast elfBeast) {
+    super(elfBeast);
+    this.helpType = elfBeast.helpType;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return super.equals(obj);
+  }
+
+  @Override
+  public int hashCode() {
+    return super.hashCode();
+  }
+
+  @Override
+  public ElfBeast copy() {
+    return new ElfBeast(this);
+  }
+
+  @Override
+  public String toString() {
+    return "Elven eagle helps in " + helpType;
+  }
 
 }

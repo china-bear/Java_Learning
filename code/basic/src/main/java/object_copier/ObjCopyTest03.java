@@ -34,5 +34,8 @@ public class ObjCopyTest03 {
         //进行深拷贝后，改变User2对象中的属性不会对原来User1对象中的属性有任何影响，说明User1和User2 不管是属性还是其引用对象都是重新生成互不关联的两个对象：
         System.out.println("user1 的name"+user1.getName());
         System.out.println("user1 的techerName"+user1.getTeacher().getTeacherName());
+
+        //判断USER1 和 USER2 对象是否是同一个对象
+        System.out.println("user1 和 user2 是同一个对象: " + (user1 == user2));
     }
 }

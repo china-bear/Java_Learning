@@ -121,13 +121,25 @@ public class HalflingThief {
 ## 类图
 ![alt text](../template-method/etc/template_method_urm.png "Template Method")
 
+## 优缺点
+1.优点：
+
+* 提高代码复用性: 将相同部分的代码放在抽象的父类中，而将不同的代码放入不同的子类中
+* 实现了反向控制: 通过一个父类调用其子类的操作，通过对子类的具体实现扩展不同的行为, 实现了反向控制, 并符合“开闭原则”
+
+2.缺点：
+
+* 对每个不同的实现都需要定义一个子类，这会导致类的个数增加，系统更加庞大，设计也更加抽象
+* 父类中的抽象方法由子类实现，子类执行的结果会影响父类的结果，这导致一种反向的控制结构，它提高了代码阅读的难度
+
 ## 适用性
 
 使用模板方法模式可以
 
-* 一次性实现一个算法中不变的部分并将其留给子类来实现可能变化的行为。
+* 一次性实现一个算法中不变的部分并将其留给子类来实现可能变化的行为, 将容易变的部分抽象出来，供子类实现.
 * 子类之间的共同行为应分解并集中在一个共同类中，以避免代码重复。如Opdyke和Johnson所描述的，这是“重构概括”的一个很好的例子。你首先要确定现有代码中的差异，然后将差异拆分为新的操作。最后，将不同的代码替换为调用这些新操作之一的模板方法。
 * 控制子类扩展。您可以定义一个模板方法，该方法在特定点调用“ 钩子”操作，从而仅允许在这些点进行扩展
+* 需要通过子类来决定父类算法中某个步骤是否执行，实现子类对父类的反向控制
 
 ## 教程
 
@@ -135,6 +147,7 @@ public class HalflingThief {
 
 ## Java例子
 
+* InputStream类就使用了模板方法模, 在InputStream类中定义了多个 read() 方法
 * [javax.servlet.GenericServlet.init](https://jakarta.ee/specifications/servlet/4.0/apidocs/javax/servlet/GenericServlet.html#init--): 
 Method `GenericServlet.init(ServletConfig config)` calls the parameterless method `GenericServlet.init()` which is intended to be overridden in subclasses.
 Method `GenericServlet.init(ServletConfig config)` is the template method in this example.

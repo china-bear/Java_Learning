@@ -1,6 +1,21 @@
 #
 
 ## ==  &  equals
+1. equals()：是超类Object中的方法;  ==：是操作符
+2. 对equals 没有重写的类就只能从Object类中继承equals方法， 其equals方法与==就也是等效的, 除非在此类中重写equals
+3. equals()：没有==运行速度快;  ==：运行速度比equals()快，因为==只是比较引用
+4. equals()：用来检测两个对象是否相等，即两个对象的内容是否相等
+* 自反性：对任意引用值X，x.equals(x)的返回值一定为true
+* 对称性：对于任何引用值x,y,当且仅当y.equals(x)返回值为true时，x.equals(y)的返回值一定为true
+* 传递性：如果x.equals(y)=true, y.equals(z)=true,则x.equals(z)=true
+* 一致性：如果参与比较的对象没任何改变，则对象比较的结果也不应该有任何改变
+* 任何非空的引用值X，x.equals(null)的返回值一定为false
+
+5. ==：用于比较引用和比较基本数据类型时具有不同的功能，具体如下：
+* 基础数据类型：比较的是他们的值是否相等，比如两个int类型的变量，比较的是变量的值是否一样
+* 引用数据类型：比较的是引用的地址是否相同，比如说新建了两个User对象，比较的是两个User的地址是否一样
+* String 和 Integer 类重写了 equals 方法，代码实现变成了值比较
+
 
 ## equals和hashCode同时存在的意义
 
@@ -14,7 +29,7 @@
 * 如果两个对象相等，则hashcode一定也是相同的
 * 两个对象相等,对两个对象分别调用equals方法都返回true
 * 两个对象有相同的hashcode值，它们可能不相等(hash碰撞的时候)
-* 因此，equals 方法被覆盖过，则 hashCode 方法也必须被覆盖
+* 因此, equals 方法被覆盖过，则 hashCode 方法也必须被覆盖
 * hashCode() 的默认行为是对堆上的对象产生独特值。如果没有重写 hashCode()，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）
 
 

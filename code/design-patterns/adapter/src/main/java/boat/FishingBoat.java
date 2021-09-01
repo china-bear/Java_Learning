@@ -21,13 +21,21 @@
  * THE SOFTWARE.
  */
 
-package adapter;
+package boat;
+
+import org.slf4j.Logger;
+
+import static org.slf4j.LoggerFactory.getLogger;
 
 /**
- * The interface expected by the client.<br> A rowing boat is rowed to move.
+ * Device class (adaptee in the pattern). We want to reuse this class. Fishing boat moves by
+ * sailing.
  */
-public interface RowingBoat {
 
-  void row();
+final class FishingBoat {
+  private static final Logger LOGGER = getLogger(FishingBoat.class);
+  void sail() {
+    LOGGER.info("The fishing boat is sailing");
+  }
 
 }

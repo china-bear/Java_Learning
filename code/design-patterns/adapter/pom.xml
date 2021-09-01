@@ -23,7 +23,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>adapter.App</mainClass>
+                                    <mainClass>boat.App</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>

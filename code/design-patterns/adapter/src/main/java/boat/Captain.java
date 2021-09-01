@@ -21,21 +21,29 @@
  * THE SOFTWARE.
  */
 
-package adapter;
+package boat;
 
-import org.slf4j.Logger;
-
-import static org.slf4j.LoggerFactory.getLogger;
 
 /**
- * Device class (adaptee in the pattern). We want to reuse this class. Fishing boat moves by
- * sailing.
+ * The Captain uses {@link RowingBoat} to sail. <br> This is the client in the pattern.
  */
 
-final class FishingBoat {
-  private static final Logger LOGGER = getLogger(FishingBoat.class);
-  void sail() {
-    LOGGER.info("The fishing boat is sailing");
+public final class Captain {
+  private RowingBoat rowingBoat;
+
+  public Captain() {
+  }
+
+  public Captain(RowingBoat rowingBoat) {
+    this.rowingBoat = rowingBoat;
+  }
+
+  public void setRowingBoat(RowingBoat rowingBoat) {
+    this.rowingBoat = rowingBoat;
+  }
+
+  void row() {
+    rowingBoat.row();
   }
 
 }

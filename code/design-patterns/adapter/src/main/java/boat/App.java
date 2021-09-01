@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package adapter;
+package boat;
 
 /**
  * An adapter helps two incompatible interfaces to work together. This is the real world definition

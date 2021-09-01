@@ -261,6 +261,27 @@ git push origin
 ```
 
 [git如何合并分支](https://www.jianshu.com/p/26d050497abb)
+
+将 开发分支 合并到dev分支
+1. 提交开发分支代码
+git  add .
+git  commit -m '提交的备注信息'
+git  push -u origin mdw-show-apps
+
+2.切换到dev分支
+git checkout dev
+
+3 把远程dev分支代码pull下来
+git pull origin dev
+
+4. 把mdw-show-apps分支的代码合并到dev上
+git merge  mdw-show-apps
+
+5. 然后查看状态及执行提交命令
+git status
+
+git push origin dev
+
 ## 推荐
 
 **在线演示学习工具：**

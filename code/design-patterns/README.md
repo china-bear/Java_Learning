@@ -14,7 +14,7 @@
 
 ## 结构模式
 
-1. 门面(Facade)模式
+1. 门面(Facade)模式 也叫外观模式
 2. [代理(Proxy)模式](docs/proxy.md)
 3. 适配器(Adapter)模式
 4. 组合(Composite)模式

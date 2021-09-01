@@ -65,6 +65,13 @@ blacksmith.manufactureWeapon(WeaponType.AXE);
 ## 类图
 ![alt text](../factory-method/etc/factory-method.urm.png "Factory Method pattern class diagram")
 
+## 优缺点
+1.优点：
+* 用户只需要知道具体工厂的名称就可得到所要的产品, 无须知道产品的具体创建过程
+* 在系统增加新的产品时只需要添加具体产品类和对应的具体工厂类, 无须对原工厂进行任何修改,满足开闭原则
+2.缺点：
+* 每增加一个产品就要增加一个具体产品类和一个对应的具体工厂类，这增加了系统的复杂度。
+
 ## 适用性
 使用工厂方法模式当
 
@@ -75,6 +82,11 @@ blacksmith.manufactureWeapon(WeaponType.AXE);
 ## 模板方法 与 策略模式 比较
 * 模板方法模式： compile-time algorithm selection by subclassing
 * 策略模式：run-time algorithm selection by containment
+
+## 工厂方法 VS 抽象工厂
+* 工厂方法： 产品容易扩展
+* 抽象工厂： 产品族容易扩展, 产品不易扩展
+* SPRING IOC 综合解决二者的缺点
 
 ## Java中的例子
 

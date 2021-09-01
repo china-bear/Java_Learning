@@ -21,17 +21,13 @@
  * THE SOFTWARE.
  */
 
-package adapter;
+package boat;
 
 /**
- * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link RowingBoat}
- * interface expected by the client ({@link Captain}).
+ * The interface expected by the client.<br> A rowing boat is rowed to move.
  */
-public class FishingBoatAdapter implements RowingBoat {
+public interface RowingBoat {
 
-  private final FishingBoat boat = new FishingBoat();
+  void row();
 
-  public final void row() {
-    boat.sail();
-  }
 }

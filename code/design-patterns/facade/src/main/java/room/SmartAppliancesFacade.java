@@ -6,7 +6,7 @@ import java.util.logging.Level;
  * @version v1.0
  * @ClassName: SmartAppliancesFacade
  * @Description: 外观类，用户主要和该类对象进行交互
- * @Author: 黑马程序员
+ * @Author:
  */
 public class SmartAppliancesFacade {
 

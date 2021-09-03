@@ -29,6 +29,7 @@
         <module>builder</module>
         <module>iterator</module>
         <module>facade</module>
+        <module>mediator</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

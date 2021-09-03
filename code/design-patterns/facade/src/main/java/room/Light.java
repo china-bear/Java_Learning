@@ -4,7 +4,7 @@ package room;
  * @version v1.0
  * @ClassName: Light
  * @Description: 电灯类
- * @Author: 黑马程序员
+ * @Author:
  */
 public class Light {
 

@@ -34,8 +34,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 
+        <cglib.version>3.3.0</cglib.version>
         <joda.version>2.9.9</joda.version>
-
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.30</slf4j.version>
         <slf4j-simple.version>1.7.30</slf4j-simple.version>
@@ -95,6 +95,13 @@
     <dependencyManagement>
         <!--工具包依赖-->
         <dependencies>
+
+            <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
 
             <!-- https://mvnrepository.com/artifact/joda-time/joda-time 优雅的处理日期时间 -->
             <dependency>

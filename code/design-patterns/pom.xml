@@ -32,6 +32,9 @@
         <module>mediator</module>
         <module>decorator</module>
         <module>proxy</module>
+        <module>retry</module>
+        <module>command</module>
+        <module>composite</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

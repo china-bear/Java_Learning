@@ -2,18 +2,18 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
 
-设计模式是软件设计中常见问题的典型解决方案, 它们就像能根据需求进行调整的预制蓝图, 可用于解决代码中反复出现的设计问题， 设计模式的一个重要原则就是：别改代码，只需要添代码
+设计模式是软件设计中常见问题的典型解决方案, 它们就像能根据需求进行调整的预制蓝图, 可用于解决代码中反复出现的设计问题, 设计模式的一个重要原则就是:  别改代码, 只需要添代码
 
-## 创建模式
-
+## 创建模式(Creational)
 1. [单例(Singleton)模式](../design-patterns/singleton/README.md)
 2. [工厂方法(Factory-Method)模式](../design-patterns/factory-kit/README.md)
 3. [抽象工厂(Factory-Abstract)模式](../design-patterns/factory-kit/README.md)
 4. 原型(Prototype)模式
 5. 生成器模式(Builder)模式
 
-## 结构模式
+-- **模式扩展收集**
 
+## 结构模式(Structural)
 1. 门面(Facade)模式 也叫外观模式
 2. [代理(Proxy)模式](docs/proxy.md)
 3. 适配器(Adapter)模式
@@ -22,8 +22,9 @@
 6. 桥接(Bridge)模式
 7. 享元(Flyweight)模式
 
-## 行为模式
+-- **模式扩展收集**
 
+## 行为模式(Behavioral)
 1. [状态(State)模式](docs/state.md)
 2. [策略(Strategy)模式](docs/strategy.md)
 3. [访问者(Visitor)模式](docs/visitor.md)
@@ -35,6 +36,8 @@
 9. [观察者模式](docs/cor.md)
 10.[模板方法模式](docs/cor.md)
 
+-- **模式扩展收集**
+11. [重试(retry)模式](../design-patterns/retry/README.md)
 
 ## 附
 -- https://refactoringguru.cn/design-patterns

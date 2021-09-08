@@ -35,6 +35,7 @@
         <module>retry</module>
         <module>command</module>
         <module>composite</module>
+        <module>state</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

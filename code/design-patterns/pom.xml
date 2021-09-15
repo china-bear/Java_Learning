@@ -40,6 +40,7 @@
         <module>chain-of-responsibility</module>
         <module>flyweight</module>
         <module>observer</module>
+        <module>visitor</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

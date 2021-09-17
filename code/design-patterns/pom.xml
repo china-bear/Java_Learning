@@ -41,6 +41,7 @@
         <module>flyweight</module>
         <module>observer</module>
         <module>visitor</module>
+        <module>interpreter</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->
@@ -60,6 +61,13 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter  是常用JUnit5 模块的聚合包-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>

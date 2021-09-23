@@ -53,5 +53,31 @@
 -- **模式扩展收集**
 12. [重试(retry)模式](../design-patterns/retry/README.md)
 
-## 附
--- https://refactoringguru.cn/design-patterns
+## 软件架构模式(software architecture)
+
+> 架构模式是一个通用的、可重用的解决方案, 用于在给定上下文中的软件体系结构中经常出现的问题. 架构模式与软件设计模式类似, 但具有更广泛的范围
+
+1.[数据映射器(data-mapper)模式](../design-patterns/data-mapper/README.md)
+分层架构
+事件驱动架构
+微核架构（插件化架构）
+微服务架构
+云架构
+
+https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+Layered pattern
+Client-server pattern
+Master-slave pattern
+Pipe-filter pattern
+Broker pattern
+Peer-to-peer pattern
+Event-bus pattern
+Model-view-controller pattern
+Blackboard pattern
+Interpreter pattern
+
+## 引用
+[Design patterns implemented in Java](https://github.com/iluwatar/java-design-patterns)
+[常用的设计模式](https://sourcemaking.com/design_patterns)
+[常用的设计模式](https://refactoringguru.cn/design-patterns)
+[Java patterns implemented](https://java-design-patterns.com/patterns/)

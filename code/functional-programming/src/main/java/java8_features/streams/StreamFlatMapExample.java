@@ -3,6 +3,7 @@ package java8_features.streams;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import java8_features.repo.Person;
 import java8_features.repo.PersonRepository;
@@ -34,6 +35,15 @@ public class StreamFlatMapExample {
 	}
 
 	public static void main(String[] args) {
+
+		// maring all the streams into one stream
+		Stream<List<String>> namesOriginalList = Stream.of(Arrays.asList("Pankaj"), Arrays.asList("David", "Lisa"),
+				Arrays.asList("Amit"));
+
+		// flat the stream from List<String> to String stream
+		Stream<String> flatStream = namesOriginalList.flatMap(p -> p.stream());
+		flatStream.forEach(p -> System.out.println(p));
+
 		List<Integer> oddNumber = Arrays.asList(1,3,5,7);
 		List<Integer> evenNumber = Arrays.asList(2,4,6,8);
 		

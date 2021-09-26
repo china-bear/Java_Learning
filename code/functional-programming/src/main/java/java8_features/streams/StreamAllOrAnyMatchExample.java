@@ -17,13 +17,18 @@ public class StreamAllOrAnyMatchExample {
 		List<String> fruits = Arrays.asList("Apple","Orange","Graphs","Banana","Pineapple");
 		System.out.println("Length Check All Match:"+fruits.stream().allMatch(p1));
 		System.out.println("Length Check Any Match:"+fruits.stream().anyMatch(p1));
-		System.out.println("Person All Match :" +PersonRepository.getAllPersons()
+
+		System.out.println("Person All Match :" + PersonRepository.getAllPersons()
 		.stream()
 		.allMatch(p2));
 		
-		System.out.println("Person Any Match :" +PersonRepository.getAllPersons()
+		System.out.println("Person Any Match :" + PersonRepository.getAllPersons()
 		.stream()
 		.anyMatch(p2.and(p3)));
+
+		boolean ret = PersonRepository.getAllPersons().stream().allMatch(p -> p.getHeight() > 140);
+		System.out.println(ret);// true
+
 	}
 
 }

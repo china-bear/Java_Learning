@@ -2,6 +2,7 @@ package java8_features.streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamLimitExample {
 
@@ -19,6 +20,11 @@ public class StreamLimitExample {
 				.skip(5)
 				.reduce(0,(x,y)-> (x+y));
 		System.out.println("Sum of Skip :"+skip);
-	}
 
+		List<String> list = Arrays.asList("ab", "b", "c", "d", "e");
+
+		System.out.println(list.stream().skip(2).collect(Collectors.toList())); // output: [c,d,e]
+
+		System.out.println(list.stream().limit(3).collect(Collectors.toList())); // output: [ab, b, c]
+	}
 }

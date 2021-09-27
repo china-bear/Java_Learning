@@ -53,6 +53,9 @@
 -- **模式扩展收集**
 12. [重试(retry)模式](../design-patterns/retry/README.md)
 
+## 并发模式(Concurrency)
+1. [状态(State)模式](../design-patterns/state/README.md)
+
 ## 软件架构模式(software architecture)
 
 > 架构模式是一个通用的、可重用的解决方案, 用于在给定上下文中的软件体系结构中经常出现的问题. 架构模式与软件设计模式类似, 但具有更广泛的范围

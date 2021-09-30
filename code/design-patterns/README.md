@@ -15,6 +15,9 @@
 5. [生成器模式(Builder)模式](../design-patterns/builder/README.md)
 
 -- **模式扩展收集**
+6. [工厂套件(Factory Kit)模式](../design-patterns/factory-kit/README.md)
+
+-- **模式扩展收集**
 
 ## 结构模式(Structural)
 
@@ -52,15 +55,20 @@
 
 -- **模式扩展收集**
 12. [重试(retry)模式](../design-patterns/retry/README.md)
+13. [双缓冲(Double Buffer)模式](../design-patterns/double-buffer/README.md)
+14. [优先队列(Priority Queue)模式](../design-patterns/priority-queue/README.md)
 
 ## 并发模式(Concurrency)
-1. [状态(State)模式](../design-patterns/state/README.md)
+1. [线程池(Thread Pool)模式](../design-patterns/state/README.md)
+2. [止步模式(balking)模式](../design-patterns/balking/README.md)
 
 ## 软件架构模式(software architecture)
 
 > 架构模式是一个通用的、可重用的解决方案, 用于在给定上下文中的软件体系结构中经常出现的问题. 架构模式与软件设计模式类似, 但具有更广泛的范围
 
 1.[数据映射器(data-mapper)模式](../design-patterns/data-mapper/README.md)
+2.[数据访问对象(dao)模式](../design-patterns/dao/README.md)
+3.
 分层架构
 事件驱动架构
 微核架构（插件化架构）
@@ -78,6 +86,12 @@ Event-bus pattern
 Model-view-controller pattern
 Blackboard pattern
 Interpreter pattern
+
+## 惯用语法(Idiom)
+
+1.[回调(callback)模式](../design-patterns/callback/README.md)
+2.[双重检查锁(Double Checked Locking)模式](../design-patterns/double-checked-locking/README.md)
+
 
 ## 引用
 [Design patterns implemented in Java](https://github.com/iluwatar/java-design-patterns)

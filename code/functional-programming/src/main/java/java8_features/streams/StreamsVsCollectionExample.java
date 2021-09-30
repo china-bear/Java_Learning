@@ -16,18 +16,14 @@ public class StreamsVsCollectionExample {
 		names.add("Adan");
 		names.add("Nancy");
 		
+
 		for(String name : names) {
-			//System.out.println("Iteration 1 :"+name);
-		}
-		
-		for(String name : names) {
-			//System.out.println("Iteration 2 :"+name);
+			System.out.println("Iteration :"+name);
 		}
 		
 		Stream<String> stream = names.stream();
-		//stream.forEach(p -> System.out.println("<<<< :"+p));
-		//stream.forEach(p -> System.out.println("<<<< :"+p));
-		
+		stream.forEach(p -> System.out.println("<<<< :"+p));
+
 		List<String> personNames = PersonRepository
 				.getAllPersons()
 				.stream()

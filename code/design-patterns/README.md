@@ -68,24 +68,23 @@
 
 1.[数据映射器(data-mapper)模式](../design-patterns/data-mapper/README.md)
 2.[数据访问对象(dao)模式](../design-patterns/dao/README.md)
-3.
-分层架构
-事件驱动架构
+3.[数据总线(data-bus)](../design-patterns/data-bus/README.md)
+
+10种常见的软件架构模式
+分层模式
+客户端-服务器模式
+主从设备模式
+管道-过滤器模式
+代理模式
+点对点模式
+事件总线模式
+模型-视图-控制器模式
+黑板模式
+解释器模式
+
 微核架构（插件化架构）
 微服务架构
 云架构
-
-https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
-Layered pattern
-Client-server pattern
-Master-slave pattern
-Pipe-filter pattern
-Broker pattern
-Peer-to-peer pattern
-Event-bus pattern
-Model-view-controller pattern
-Blackboard pattern
-Interpreter pattern
 
 ## 惯用语法(Idiom)
 

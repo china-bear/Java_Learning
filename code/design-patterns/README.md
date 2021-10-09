@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
 
-设计模式是软件设计中常见问题的典型解决方案, 它们就像能根据需求进行调整的预制蓝图, 可用于解决代码中反复出现的设计问题, 设计模式的一个重要原则就是:  别改代码, 只需要添代码
+设计模式是软件设计中常见问题的典型解决方案, 它们就像能根据需求进行调整的预制蓝图, 可用于解决代码中反复出现的设计问题, 设计模式的一个重要原则就是: 别改代码, 只需要添代码
 
 ## 创建模式(Creational)
 
@@ -59,18 +59,19 @@
 14. [优先队列(Priority Queue)模式](../design-patterns/priority-queue/README.md)
 
 ## 并发模式(Concurrency)
-1. [线程池(Thread Pool)模式](../design-patterns/state/README.md)
-2. [止步模式(balking)模式](../design-patterns/balking/README.md)
+1. [生产者-消费者(producer-consumer)模式](../design-patterns/producer-consumer/README.md)
+2. [线程池(Thread Pool)模式](../design-patterns/state/README.md)
+3. [止步模式(balking)模式](../design-patterns/balking/README.md)
 
 ## 软件架构模式(software architecture)
 
 > 架构模式是一个通用的、可重用的解决方案, 用于在给定上下文中的软件体系结构中经常出现的问题. 架构模式与软件设计模式类似, 但具有更广泛的范围
 
-1.[数据映射器(data-mapper)模式](../design-patterns/data-mapper/README.md)
-2.[数据访问对象(dao)模式](../design-patterns/dao/README.md)
-3.[数据总线(data-bus)](../design-patterns/data-bus/README.md)
+1. [数据映射器(data-mapper)模式](../design-patterns/data-mapper/README.md)
+2. [数据访问对象(dao)模式](../design-patterns/dao/README.md)
+3. [数据总线(data-bus)](../design-patterns/data-bus/README.md)
 
-10种常见的软件架构模式
+10种常见的软件架构模式  https://zhuanlan.zhihu.com/p/266696645
 分层模式
 客户端-服务器模式
 主从设备模式

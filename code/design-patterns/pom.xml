@@ -50,6 +50,8 @@
         <module>priority-queue</module>
         <module>data-bus</module>
         <module>producer-consumer</module>
+        <module>leader-followers</module>
+        <module>event-queue</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

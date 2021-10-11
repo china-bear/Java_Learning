@@ -60,8 +60,11 @@
 
 ## 并发模式(Concurrency)
 1. [生产者-消费者(producer-consumer)模式](../design-patterns/producer-consumer/README.md)
-2. [线程池(Thread Pool)模式](../design-patterns/state/README.md)
-3. [止步模式(balking)模式](../design-patterns/balking/README.md)
+2. [线程池(Thread Pool)模式](../design-patterns/thread-pool/README.md)
+3. [止步(balking)模式](../design-patterns/balking/README.md)
+4. [领导选举(leader-followers)模式](../design-patterns/leader-followers/README.md)
+5. [事件队列(Event Queue)模式](../design-patterns/Event Queue/README.md)
+6. [异步调用(async-method-invocation)模式](../design-patterns/async-method-invocations/README.md)
 
 ## 软件架构模式(software architecture)
 
@@ -87,10 +90,15 @@
 微服务架构
 云架构
 
-## 惯用语法(Idiom)
+## 惯用语法模式(Idiom)
 
 1.[回调(callback)模式](../design-patterns/callback/README.md)
-2.[双重检查锁(Double Checked Locking)模式](../design-patterns/double-checked-locking/README.md)
+2.[延迟加载(lazy-loading)模式](../design-patterns/lazy-loading/README.md)
+3.[私有类数据(private-class-data)模式](../design-patterns/private-class-data/README.md)
+4.[资源获取即初始化(resource-acquisition-is-initialization)模式](../design-patterns/resource-acquisition-is-initialization/README.md)
+5.[组合器(Combinator)模式](../design-patterns/Combinator/README.md)
+5.[执行(execute-around)模式](../design-patterns/execute-around/README.md)
+6.[双重检查锁(Double Checked Locking)模式](../design-patterns/double-checked-locking/README.md)
 
 
 ## 引用

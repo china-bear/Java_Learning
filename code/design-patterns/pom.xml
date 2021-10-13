@@ -52,6 +52,8 @@
         <module>producer-consumer</module>
         <module>leader-followers</module>
         <module>event-queue</module>
+        <module>lazy-loading</module>
+        <module>private-class-data</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

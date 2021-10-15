@@ -51,6 +51,7 @@ public class CombinatorApp {
    * @param args args
    */
   public static void main(String[] args) {
+
     String[] queriesOr = new String[]{"many", "Annabel"};
     Finder finder = Finders.expandedFinder(queriesOr);
     List<String> res = finder.find(text());

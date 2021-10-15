@@ -56,6 +56,7 @@
         <module>private-class-data</module>
         <module>resource-acquisition-is-initialization</module>
         <module>combinator</module>
+        <module>execute-around</module>
     </modules>
 
     <!--slf4j-simple包 是slf4j提供的一个简单实现-->

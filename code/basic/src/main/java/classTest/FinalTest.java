@@ -3,7 +3,7 @@ package classTest;
 /**
  * @program: Java_Learning
  * @description: FinalTest
- * @author: Mr.Bear
+ * @author: https://segmentfault.com/a/1190000040385225
  * @create: 2021-02-28 20:41
  **/
 

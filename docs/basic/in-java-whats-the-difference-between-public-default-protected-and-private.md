@@ -11,6 +11,13 @@ protected  |  Y |  Y |  Y |  N
 无修饰符  |  Y |  Y |  N or Y(见说明） |  N
 private  |  Y |  N |  N |  N
 
+**Private Access modifier use in**: - Only same class
+
+**Default Access modifier use in:** - Only same class / Same package subclasses
+
+**Protected Access modifier use in:** - same class / Same package subclasses / Same package non - subclasses / Different package subclasses
+
+**Public Access modifier use in:** - we can use anywhere (same class / Same package subclasses / Same package non - subclasses / Different package subclasses/ Different package non - subclasses)
 
 说明：
 需要特别说明“无修饰符”这个情况，子类能否访问父类中无修饰符的变量/方法，取决于子类的位置。如果子类和父类在同一个包中，那么子类可以访问父类中的无修饰符的变量/方法，否则不行。

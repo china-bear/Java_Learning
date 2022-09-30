@@ -32,6 +32,10 @@ public class StudentBuilder {
     }
 
     // https://juejin.cn/post/6844903801510428686   创建工厂模板
+/*  为什么要创建一个StudentBuilder  而不是直接这样写： Student s1 = new Student().age(16)
+    复制代码这样写有两个坏处: 1. 实例化有些字段没有初始化，可能存在安全隐患
+    2 .我们创建一个Student之后，并不希望他有一个.age()方法，这个方法可能会被滥用。*/
+
     public static void main(String[] args) {
         Student s1 = new StudentBuilder().name("张三丰").buildStudent();
         Student s2 = new StudentBuilder()

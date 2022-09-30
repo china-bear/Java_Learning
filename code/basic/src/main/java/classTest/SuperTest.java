@@ -12,7 +12,7 @@ public class SuperTest {
 
     static public class Teacher {
 
-        public String name;
+        public String name="大军";
 
         public Teacher() {
             System.out.println("我是一名人民教师。");
@@ -32,6 +32,7 @@ public class SuperTest {
         }
 
         public void fatherName() {
+            System.out.println("我的父类名字是：" + name); // 3. 调用父类的属性
             super.setName("小军"); //2. 调用父类普通方法
             System.out.println("我的父类名字是：" + super.name); // 3. 调用父类的属性
         }

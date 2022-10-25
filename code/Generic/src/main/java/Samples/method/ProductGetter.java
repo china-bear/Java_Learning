@@ -62,6 +62,14 @@ public class ProductGetter<T> {
         }
     }
 
+    public static <T> ArrayList<T> makeList(T... args) {
+        ArrayList<T> result = new ArrayList<>();
+        for (T item : args) {
+            result.add(item);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         ProductGetter<Integer> productGetter = new ProductGetter<>();
         ArrayList<String> strList = new ArrayList<>();
@@ -100,5 +108,13 @@ public class ProductGetter<T> {
         // 抽奖
         String product2 = stringProductGetter.getProduct();
         System.out.println("恭喜你, 你抽中了：" + product2);
+
+        // 泛型和可变参数列表
+        ArrayList<String> ls = makeList("A");
+        System.out.println("ls = " + ls);
+        ls = makeList("A", "B", "C");
+        System.out.println("ls = " + ls);
+        ls = makeList("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+        System.out.println("ls = " + ls);
     }
 }

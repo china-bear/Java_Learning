@@ -26,7 +26,7 @@ public class InnerClassTest {
         StudyJava studyJavaImpl = new StudyJavaImpl();
         studyJavaImpl.study();
 
-        // 2、匿名内部类实现study方法
+        // 2、匿名内部类实现study方法, 不需要创建具体的实现类
         StudyJava studyJava = new StudyJava() {
             final String name = "spring";
 

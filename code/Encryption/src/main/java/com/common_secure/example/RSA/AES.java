@@ -63,7 +63,7 @@ public class AES {
     public static void main(String[] args) throws Throwable {
         String iv="0522304586294240";
         String key="rIZLLTfhwJ6FNPTyl2VlOA==";
-        String encstr="cAkUIu3fWKbKnnIDvwSDgu2B5Kwi3j7i0IbJ5urUhKin1usdZjAgUL4IIkvxhYp0G5fNagI5xygErqyzSHxUZts8fkIwF2DdMX+vV0YbacNCL1MGqicLyGlryGqEjCM3smgDruCDvi8y/TR4o4l6zNEERGgFH/EeT0jVD74CnbUYvXyhJ+WQUKNyg31ju4nL1JTSIQlohObd9CQ77P7qwgw5FZpprJ2UAYSoj94mkwZtb9Og4XyiavjkxKtQiE5h03S35ALTE6NWBypGu/vygDJPQGcChdsUORVR4oaPeJrlHB7wb2nqYpafhsnqJjhjiTQBNIWXgAIIJ7TwcrqBpEUvgjlbhcOzsM3//wSjHZVNnXQmM1A0Y6m/OhkhuA7TDEWFuRdphWIr4Qkz+umg+h8Zlvu7Ntr3Bxy8JkqNbhw=";
+        String encstr="cAkUIu3fWKbKnnIDvwSDgu2B5Kwi3j7i0IbJ5urUhKin1usdZjAgUL4IIkvxhYp0FiBQBH9vf8CfVindU5nWNTAyLuk6osaCk+O5KWGfEHwzn6U68wy8Bj5OzoQYHLwvGvPaJjHO5XHwPtuJTaohmYsGRWDlRjAymsUdUVFyTjC7++t1MjE4oZ3YRsN5Z6yvMU6mPQZhi11sxojRKRSKPKQRbJMf8/LXVLKY8VHkLLIryjUdLKvPaYuLYTKY79cyouBh+asyffqGbjQ5mwM8qNeVcv0sSlpVo/WodyQzw8c/P0arq3CyhkJ0dwLlZT4axSIqifxNer/LFkYKUINfrg==";
 
         byte[] data = decrypt(iv, Base64.getDecoder().decode(key), encstr.getBytes());
         System.out.println(new String(data));

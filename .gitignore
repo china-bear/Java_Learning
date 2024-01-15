@@ -31,3 +31,4 @@ hs_err_pid*
 /code/*/target/
 /code/*/*.iml
 /code/data-structure/data-structure.iml
+/code/database/src/main/java/com/chinabear/jdbc/md5Demo.java

@@ -121,3 +121,18 @@ POJO是一个简单的、普通Java对象，它包含业务逻辑处理或持久
    因为这些要求主要是靠约定而不是靠实现接口，所以许多开发者把JavaBean看作遵从特定命名约定的POJO。（可以这么理解，POJO按JavaBean的规则来，就可以变成JavaBean）。
    
    简而言之，当一个POJO可序列化，有一个无参的构造函数，使用getter和setter方法来访问属性时，他就是一个JavaBean。（没毛病！）
+   
+   ORM（Object-Relational Mapping）是一种技术，用于将对象模型映射到关系数据库中。ORM框架可以自动执行CRUD操作，从而简化了数据访问层的开发。Hibernate和MyBatis是Java中常用的ORM框架。
+   Repository是一个接口，用于定义数据访问操作。它通常由DAO实现，但也可以由ORM框架自动生成。
+   
+
+   
+## Java三层体系
+
+1.Dao层(通过操作实体类（Entity Class），从而操作数据库中的表，完成对应数据的CRUD操作。)
+Dao全称Data Access Object（数据访问对象）主要负责访问数据库，对数据的CRUD，获取结果集返回给Service，不会涉及事务。
+2.Service层
+Service层主要负责业务逻辑的实现，实际就是对Dao层的增删改查操作的进一步封装，涉及到事务的操作。
+如：获取数据库连接，关闭数据库连接，事务回滚或者一些复杂的逻辑业务处理
+3.Controller层
+Controller层主要用于对业务逻辑进行控制，控制用户输入，接收来自前端的请求，将需要执行的操作交给Service层进行处理，再将处理后的结果返回给前端。

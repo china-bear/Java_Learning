@@ -1,6 +1,7 @@
 package Samples.erase;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 
 /**
  * @program: Java_Learning
@@ -12,14 +13,12 @@ public class EraseTest01 {
 
     public static void main(String[] args) {
 
-        /*
         ArrayList<Integer> intList = new ArrayList<>();
         ArrayList<String> strList = new ArrayList<>();
         System.err.println(intList.getClass().getSimpleName());
         System.err.println(strList.getClass().getSimpleName());
 
         System.err.println(intList.getClass() == strList.getClass());
-        */
 
         Erasure01<Integer> erasure = new Erasure01<>();
         //利用反射，获取Erasure类的字节码文件的Class类对象

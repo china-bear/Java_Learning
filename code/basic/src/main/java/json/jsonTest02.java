@@ -37,7 +37,7 @@ public class jsonTest02 {
         JSONObject jo2 = new JSONObject(jsonString);
         System.out.println(jo2.toString(2));
         System.out.println(jo2.getString("name"));  //根据key返回
-        System.out.println(jo2.getInt("noKey"));  ////根据key返回,如果没有抛出异常 JSONException: JSONObject["noKey"] not found.
+        //System.out.println(jo2.getInt("noKey"));  ////根据key返回,如果没有抛出异常 JSONException: JSONObject["noKey"] not found.
         System.out.println(jo2.optInt("noKey"));  ////根据key返回,如果没有带缺省值 0
         System.out.println("是否空：" + jo2.isEmpty() +", key是否存在："+ jo2.isNull("test")); // 判断对象是否为空
 
@@ -83,8 +83,18 @@ public class jsonTest02 {
 
         // 1.9 JSONArray 遍历
 
-
-        // 第二种. 谷歌 Gson
+        String str = "[{name:'a',value:'aa'},{name:'b',value:'bb'},{name:'c',value:'cc'},{name:'d',value:'dd'}]" ; // 一个未转化的字符串
+        // 首先把字符串转成 JSONArray  对象
+        JSONArray jsonArray = new JSONArray(str);
+        if(jsonArray.length()>0) {
+            for (int i = 0; i < jsonArray.length(); i++) {
+                // 遍历 jsonarray 数组，把每一个对象转成 json 对象
+                JSONObject job = jsonArray.getJSONObject(i);
+                // 得到 每个对象中的属性值
+                System.out.println(job.get("name") + "=" + job.get("value"));
+            }
+        }
+        // 第二种. 谷歌 Gson https://developer.aliyun.com/article/635057
         // 第三种. 阿里巴巴 FastJson
         // 第四种. Jackson
         // 第五种. JSON Library  net.sf.json-lib  2010就没有更新
